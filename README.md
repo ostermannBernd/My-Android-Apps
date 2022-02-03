@@ -4,4 +4,4 @@ This repository contains information about my Android Apps:
     EV Station Finder USA&CAN and EV Station Finder Plus USA&CAN
     BoPlanets and BoPlanets Plus
 The Apps are available at Google Play Store.
-Actually there is only the the Privacy Policy file my-privacy-policy.html.
+Actually there is only the Privacy Policy file my-privacy-policy.html.
