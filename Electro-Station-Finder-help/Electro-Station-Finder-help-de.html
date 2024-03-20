@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=10,minimum-scale=1,user-scalable=yes"/>
+        <title>Help about Electro Station Finder EUR</title>
+
+        <style>
+            body {
+                font-family: Arial,Helvetica,sans-serif;
+                background-color: black;
+                color:white;
+                font-size: 1.0em
+            }
+            A:link{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                color:#306EFF;
+            }
+            A:visited{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                color:#FF00A0;
+            }
+
+            A:hover{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                color:cyan;
+            }
+            A:active{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                color: red;
+            }
+
+            h1 {
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+            h2 {
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                font-weight: bold;
+                margin-left: 1.0em;
+            }
+            h3{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1em;
+                font-weight: bold;
+                margin-left: 1.5em;
+            }
+            p.head{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                font-weight: bold;
+            }
+            p.subh{
+                font-weight: bold;
+                font-size: 0.9em;
+                margin-left: 1.5em;
+            }
+            .link_fontsize{
+                font-size: 1.1em;
+            }
+            DIV {
+                counter-reset: chapter;      /* Create a chapter counter scope */
+            }
+            H1:before {
+                content: counter(chapter) ". ";
+                counter-increment: chapter;  /* Add 1 to chapter */
+            }
+            H1 {
+                counter-reset: section;      /* Set section to 0 */
+            }
+            H2:before {
+                content: counter(chapter) "." counter(section) " ";
+                counter-increment: section;
+            }
+
+            ul.level1 {
+                margin-left: 1.5em;
+                padding-left: 0em;
+                list-style-type: square;
+            }
+            ul.level2 {
+                margin-left: 2.0em;
+                padding-left: 0em;
+                list-style-type: circle
+            }
+            ul.level3 {
+                margin-left: 2.5em;
+                padding-left: 0em;
+                list-style-type: disc
+            }
+            li{
+                margin-top: 0.5em
+            }
+            div.level2{
+                margin-left: 1.5em
+            }
+            div.level3{
+                margin-left: 2.0em
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div>
+            <p id="head" style="text-align: left;font-size:1.4em">
+                Hilfe zu Electro Station Finder EUR
+            </p>
+        </div>
+        <p class="head"> Version</p>
+        <ul class="level1">
+            <li>Version Electro Station Finder EUR: V3.2.5</li>
+            <li>Version Electro Station Finder Plus EUR: V3.2.5</li>
+            <li>Erfordert, dass Google Play Dienste installiert sind.</li>
+            <li>Erforderliche Android-Version: V4.4 oder höher</li>
+            <li>Entwickelt und getestet unter: Android V14.0</li>
+        </ul>
+        <p class="head">Neue Versionen</p>
+        <div  style="position: relative; float:left; margin-left: 1.0em;width: 5.3em; height: 5.3em;">
+            <img src="ic_launcher_playstore.png" alt="market icon" />
+        </div>
+        <div class="link_fontsize" style="position: relative; float:left; width:auto; height: 5.3em">
+            <a href="https://play.google.com/store/apps/details?id=electro.station.finder">
+                <b>Electro Station Finder EUR</b></a>
+            <p>
+                <a href="https://play.google.com/store/apps/details?id=electro.station.finder.plus">
+                    <b>Electro Station Finder Plus EUR</b></a>
+            </p>
+        </div>
+
+        <hr style="clear: both"/>
+        <p class="head" >Inhalt:
+        </p>
+        <div  id="contents">
+
+            <h1><a href="#About_EVSE_Finder">Über Electro Station Finder</a></h1>
+            <h1><a href="#LanguageSetting">Einstellung der Sprache</a></h1>
+            <h1><a href="#UserViews">Benutzer-Ansichten</a></h1>
+            <h1><a href="#ViewRouteForm">Ansicht Route</a></h1>
+            <h1><a href="#ViewMap">Ansicht Karte</a></h1>
+            <h1><a href="#ViewSettings">Ansicht Einstellungen</a></h1>
+            <h1><a href="#ViewStationsView">Ansicht Stationen</a></h1>
+            <h1><a href="#ViewImport">Ansicht Import</a></h1>
+            <h1><a href="#Other_Apps">Weitere Anwendungen des Autors</a></h1>
+            <h1><a href="#ChangeLog">Änderungen</a></h1>           
+            <h1><a href="#Contact">Kontakt</a></h1>
+            <h1><a href="#Copyright">Copyright und Danksagung</a></h1>
+            <hr/>
+        </div>
+
+        <div  id="helptext">
+            <h1><a id="About_EVSE_Finder">Über Electro Station Finder EUR</a></h1>  
+            Electro Station Finder ermittelt eine Route und sucht nach elektrischen Lade-Stationen. Es können Lade-Stationen längs der ermittelten Route oder 
+            im Umkreis um einen Standort gesucht werden. Die Suche nach Lade-Stationen längs der Route kann auf die Umgebung von Tankstops beschränkt werden, 
+            deren Abstand der Reichweite mit an Tankstopps erreichbaren Ladezustand der Batterien entspricht, der häufig unter 100% der Batterie-Kapazität liegt.
+            <p>
+                In <i>Einstellungen</i> der Aktions-Leiste kann der Benutzer festlegen, ob beim Start der App mit der Start-Aktion <i>Routen-Anforderung</i> oder 
+                der <i>Umgebungs-Suche</i> nach Lade-Stationen begonnen wird. Weiter kann festgelegt werden,daß die Start-Aktion mit den zuletzt verwendeten 
+                Such-Kriterien sofort ausgeführt werden soll.
+            </p>
+            <p>
+                Die Liste mit den gefundenen Lade-Stationen kann auf der SD-Karte gespeichert
+                werden. Sie kann wieder importiert werden, um zu einer ausgewählten Station 
+                zu navigieren. Electro Station Finder benötigt dafür keine Internet-Verbindung.
+            </p>
+            <p>
+                Die Route wird als rote Linie mit Routen-Markern am Start, Zwischenzielen und End-Ziel auf der Karte dargestellt. 
+                Lade-Stationen werden als Cluster- oder Einzel-Marker abhängig vom Zoom-Level gezeigt.
+                <br/>Ein Navigations-System kann verwendet werden, um vom aktuellen Standort zum ausgewählten Marker zu navigieren.
+            </p>
+            <p>
+                Neben der freienn Verrsion Electro Station Finder EUR gibt es die kostenpflichtige Version Electro Station Finder  Plus EUR.
+                Dies bietet die zusätzlichen Suchkriterien  <i>Freies Laden</i>. <i>Barierefreies Zahlungssystem</i>
+                und <i>Ladekarten</i> zur Suche von Lade-Stationen..
+            </p>
+
+            <p>
+                Die Stations-Daten stammen von
+                <a href="https://www.goingelectric.de/"><b>https://www.goingelectric.de/</b></a>
+                <br/>Electro Station Finder lädt die Stations-Daten für jede neue Routen-Anforderung oder für jeden neuen Standort herunter.
+            </p>
+            <p>GoingElectric liefert und pflegt die Stations-Daten für fast alle europäischen Länder. Vollständigkeit und Aktualitäte hängen ab von 
+                registrierten Benutzern, die neue Lade-Stationen melden oder bestehende aktualisieren können. Das funktioniert sehr gut für Deutschland, Österreich 
+                und der Schweiz (DACH). Bei anderen Ländern mangelt es manchmal an Vollständigkeit und Aktualität- 
+            </p>
+
+            <h1><a id="LanguageSetting">Einstellung der Sprache</a></h1>
+            Electro Station Finder ist zweisprachig. Wird auf dem Telefon in 'Einstellungen',
+            'Sprache &amp; Tastatur' oder 'Sprache &amp; Eingabe' die Sprache Deutsch eingestellt, dann erscheinen
+            alle Texte von Electro Station Finder in Deutsch, für jede andere eingestellte Sprache
+            in Englisch.
+            <br/>Wird Englisch(GB) oder Englisch(US) eingestellt, dann werden Entfernungen in Meilen angegeben.
+            <br/>Wird die Sprache geändert, während Electro Station Finder aktiv ist, dann erscheinen
+            bereits erzeugte Routen-Liste und Stationen-Liste noch in
+            der vorherigen Sprache, bis die Listen neu erzeugt werden.
+
+            <h1><a id="UserViews">Benutzer-Ansichten</a></h1>
+            Der Benutzer interagiert mit Electro Station Finder über Benutzer-Ansichten.
+            <br/>Es gibt die folgenden Ansichten:
+            <ul class="level1">
+                <li>Die Anwendung wird mit der Ansicht <i>Karte</i> gestartet und zeigt 
+                    eine leere Karte zentriert um den aktuellen Standort, falls dieser vom Telefon erkannt wird. Nachdem eine Route und 
+                    Lade-Stationen gefunden wurden, werden diese auf der Karte dargestellt.
+                </li>
+                <li>Die Ansicht <i>Route</i> enthält eine Maske zum Anfordern einer Route und 
+                    zeigt die Einzelheiten einer vorhandenen Route an.
+                </li>
+                <li>Die Ansicht <i>Stationen</i> enthält eine Maske zur Suche von Stationen. Eine Liste 
+                    mit Kurzbeschreibungen der Lade-Sationen wird gezeigt.
+
+                </li>
+                <li>In der Ansicht <i>Import</i> kann eine Stationen-Liste, die 
+                    auf dem externen Speicher gespeichert wurde, importiert werden.
+                </li>
+            </ul>
+            Zwischen den Ansichten kann über Menüs navigiert werden. Die Elemente eines Menus 
+            werden in der Aktionsleiste am oberen Bildschirmrand angezeigt. 
+            Abhängig vom verfügbaren Platz werden die Menü-Elemente mit Icon und mit Titel dargestellt.
+            Reicht der Platz nicht, werden nur die ersten Menü-Elemente gezeigt; die restlichen sind durch Drücken auf die vertikalen drei Punkte zugreifbar,.
+            <p>
+                Klicken auf das linke Icon (3 waagerechte Striche oder ein Pfeil nach links) 
+                der Aktionsleiste am obereren Bildschirmrand bewirkt den Wechsel zwischen den Ansichten 
+                <i>Route</i>, <i>Karte</i> und <i>Stationen</i>. Das Gleiche kann durch Wischen vom linken 
+                Bildschirmrand und zurück und durch Wischen vom rechten Bildschirmrand und zurück erreicht werden.
+                <br/>Die Ansichten <i>Route</i> und <i>Stationen</i> überdecken die Karte, die 
+                leicht gedimmt ist.
+            </p>
+            <p>
+                Drücken der 'Zurück'-Knopfes beendet die aktuelle Ansicht und kehrt zu der 
+                Ansicht zurück, von der diese gestartet wurde. Die Daten der beendeten Ansicht 
+                sind verloren.
+            </p>
+
+            <h1><a id="ViewRouteForm">Ansicht Route</a></h1>
+            Um eine Route anzufordern, ist das Feld 'Von' mit der Start-Adresse zu füllen,
+            das Feld 'Nach' mit der Adresse des Zieles (ab V1.0.4 ohne durch Semikolon getrennte Zwischenziele).
+            <p>Die Schaltfläche <I>Wegepunkte</i> öffnet eine Liste mit Wegepunkten (Zwischenziele).Ein Wegpunkt kann als Adresse hinzugefügt werden.
+                Sind bereits Lade-Stationen gefunden, kann eine Station als Wegpunkt hinzugefügt werden, indem sie auf der Karte selektiert und in 
+                der Ansicht <i>Wegepunkte</i> hinzugefügt wird oder durch Éingabe der Stations-Nummer.
+                <br/>Mit einer Station als Wegepunkt kann nach der nächsten Routen-Anforderung der Umweg von der Route zur Station sichtbar gemacht werden.
+            </p>
+            Durch Klicken auf das orange hinterlegte Kreuz kann eine Wegepunkt entfernt werden.
+            Wegepunkte können in beliebiger Reihenfolge eingegeben werden. 
+            <br/>Durch Klicken auf die Schaltfläche <i>Fertig</i> 
+            werden die Wegepunkte übernommen.
+
+            <br/>Adressen können in der Form wie bei Google Maps eingegeben werden z.B.:
+            <ul class="level1">
+                <li>Vollständige Adresse: Postleitzahl, Ort, Straße Hausnummer, Land
+                    oder 2-stelliger Länder-Kode
+                    <br/>Beispiel: 4056, Basel, Hebelstrasse 11, CH  </li>
+                <li>Unvollständige Adresse: Ort, Straße oder nur Ort  </li>
+                <li>Geopraphische Breite, Länge in dezimalen Grad
+                    <br/>Beispiel: 49.0488, 11.1429
+                </li>
+            </ul>
+            Wenn das 'Von'-Feld lange gedrückt wird, wird der letzte bekannte 
+            Standort des Telefons als Von-Adresse verwendet. Dazu muss in den 
+            Telefoneinstellungen der Standortzugriff aktiviert sein.
+            <p>Schaltflächen:</p>
+            <ul class="level1">
+                <li>Wegepunkte: öfnet das Bearbeiten von Wegepunkten.</li>
+                <li>Wechsel Von/Nach Adresse:
+                    <br/>Start und End-Adresse der Route werden vertauscht.
+                </li>
+                <li>Ohne Autobahnen: wenn markiert, dann werden Autobahnen vermieden.</li>
+                <li>Hole Route: Sendet die  Routen-Anforderung und zeigt das Ergebnis an.</li>
+            </ul>
+            <p>Menü-Elemente der Aktionsleiste: <a  href="#ViewMap">s. Ansicht Karte</a></p>
+
+            Nachdem das Ergebnis der Routenanforderung vorhanden ist, werden die
+            die Einzelheiten der Route in einer Liste und die Route auf der Karte angezeigt.
+            <br/>Die Einstellungen zur Routen-Anforderung werden nach einer erfolgreichen 
+            Anforderung gesichert und nach erneutem Start von Electro Station Finder wieder 
+            hergestellt.
+
+            <h1><a id="ViewMap">Ansicht Karte</a></h1>
+            In der Ansicht <i>Karte</i> werden die Ergebnisse einer Routenanforderung oder einer
+            Suche nach Stationen auf der Karte dargestellt.
+
+            <h2><a id="UseGoogleMaps"> Verwendung von Google Maps</a></h2>
+            Zur Darstellung von Karten verwendet Electro Station Finder Google Maps. Dazu müssen die 
+            Google Play Dienste auf dem Gerät installiert sein. Falls nicht, wird der Benutzer aufgefordert, 
+            diese vom Google Play Store zu installieren. Das setzt voraus, dass die App Google Play Store auf 
+            dem Geräte installiert ist und das Gerät mit einem Googlemail-Konto angemeldet ist.
+
+            <h2>Menü-Elemente</h2>
+            Die Akionsleiste am oberen Bildschirmrand enthält die Menü-Elemente. 
+            Die Ansichten <i>Route</i>, <i>Karte</i> und <i>Stationen</i> können auf 
+            die gleiche Aktionsleiste zugreifen.
+            <ul class="level1">
+                <li>Einstellungen:
+                    <ul class="level2">
+                        <li>Auswahl der Ansichten Satellit, mit Verkehrs-Information und Anzeige des aktuellen Standorte.</li>
+                        <li>Auswahl der Start-Aktion <i>Routen-Anforderung</i> oder <i>Umgebungs-Suche</i>.</li>
+                        <li>Mit/ohne sofortige Ausführung der Start-Aktion.</li>
+                    </ul>
+                </li>
+                <li>Stationen: wechselt zwischen den Ansichten <i>Stationen</i> und <i>Karte</i> hin und her.</li>
+                <li>Import: öffnet eine Ansicht zur Auswahl der zu importierenden 
+                    Stations-Liste, die zuvor auf externen Speicher gespeichert wurde.
+                </li>
+                <li>Hilfe: öffnet die Hilfe-Information.</li> 
+            </ul>
+
+            <h2>Behandlung von Klick/Touch-Ereignissen</h2>
+            Eine Route wird als rote Linie zusammen mit grünen Markern für Start,
+            Zwischenziele und Endziel angezeigt. Lade-Stationen werden für für große Zoom-Stufen als Marker
+            dargestellt, deren Farbe auf die maximale Leistung einer Ladesäule der Station hinweist:
+            <br/>Violet < 11 KW (L=1), Blau < 22 KW (L2), Gelb < 50 KW (L3), Braun  >= 50 KW (L4).
+
+            <br/>Für kleinere Zoom-Stufen werden die Stations-Marker in Cluster-Markern mit Angabe 
+            der enthaltenen Stationen zusammengefaßt.
+
+            <p>Drücken auf einen Cluster-Marker vergößert die Karte und zeigt die 
+                Einzel-Marker dieses Clusters.
+            </p>
+            <p>Drücken eines Einzel-Markers öffnet ein Info-Fenster mit einer kurzen Beschreibung dieses Markers. Ein kurzer Klick auf die Karte schließt das Info-Fenster.
+                <br/>Klicken auf die Leiste <i>Hole Station-Details</i> im Info-Fenster eiens Stations-Markers öffnet die Details dieser Lade-Station.
+            </p>
+            <p>
+                Klicken einer blauen Pfeil-Schaltfläche in der Mitte rechts und links des Bildschirms
+                öffnet das Info-Fenster des nächsten Markers; vorwärts durch die rechte
+                Pfeil-Schaltfläche, rückwärts durch die linke. Das betrifft Routen- und 
+                Stations--Marker.
+            </p>
+
+            <h2>Navigieren mit Navigations-System</h2>
+            Wenn ein Routen- oder Stations-Marker ausgewählt wurde, erscheint durch Drücken der Schaltfläche
+            mit dem blauen 'Nach rechts'-Pfeil   unteren Bildschirmrandeine Anfrage, ob der Benutzer mit dem angezeigten Navi-Sytem von 
+            seiner aktuellen Position zu dem ausgewählten Marker navigieren möchte. Die Adresse
+            des gewählten Markers wird angezeigt, wenn eine Internetverbindung existiert.
+            Durch Klicken auf das Feld mit dem Navi-System öffnet 
+            sich eine Liste, aus der das gewünschte Navi-System ausgewählt werden kann.
+            Antwortet der Benutzer mit <i>Ja</i>, dann wird das ausgewählte
+            Navigations-System gestartet, wenn es auf dem Android Gerät installiert ist.
+            <p>  </p>
+            Die folgenden Navigations-Systeme können verwendet werden:
+            <ul class="level1">
+                <li>Google Maps</li>
+                <li>Sygic GPS</li>
+                <li>Navigon</li>
+                <li>WAZE GPS</li>
+                <li>Here WeGo</li>
+                <li>OsmAnd</li>
+            </ul>
+
+            <p>
+                Nachdem das Navigations-System beendet wurde, wird wieder die Ansicht
+                Map geöffnet. Falls nur noch wenig freier Speicher im Telefon
+                vorhanden ist, kann Electro Station Finder von Android beendet werden und startet
+                wieder neu.
+            </p>
+
+            <h1><a id="ViewSettings">Ansicht Einstellungen</a></h1>
+            In <i>Einstellungen</i> können Eigenschaften zur Karte und zum Startverhalten der App vorgenommen werden.
+            <p class="subh">Karteneigenschafen</p>
+            <ul class="level1">
+                <li>Satellit-Ansicht</li>
+                <li>Verkehraufkommen</li>
+                <li>Mit Schalfläche zur Anzeige des aktuellen Standorts</li>
+            </ul>
+
+            <p class="subh">Start-Aktion</p>
+            <ul class="level1">
+                <li>Starten mit Routen-Anforderung</li>
+                <li>Starten mit Umgebungs-Suche</li>
+                <li>Mit Ausführung der gewählten Start-Aktion</li>
+            </ul>
+
+            <h1><a id="ViewStationsView">Ansicht Stationen</a></h1>
+            Mit der Ansicht <i>Stationen</i> können Lade-Stationen längs einer 
+            Route oder im Umkreis eines Standortes gesucht werden.
+            Die Suche längs einer Route kann beschränkt werden auf die Umgebung von Tankstops, 
+            die entsprechend der Reichweite des Fahrzeugs mit an Tankstops aufgeladenen Batterien entfernt sind. 
+            <p>Die Umkreissuche kann um einen Standort erfolgen, der durch den Standort-Dienst 
+                des Telefons ermittelt wird oder der durch eine Adresse festgelegt ist, die vom 
+                Benutzer eingegeben wurde.
+            </p>
+            <p>
+                Das Ergebnis einer Suche kann in einer Datei auf dem externen 
+                Speicher (z.B. SD-Karte) gespeichert werden. Sie kann wieder importiert werden, um 
+                zu einer Tankstelle zu navigieren. Dazu ist keine Internetverbindung erforderlich.
+            </p>
+            Die Stationen-Ansicht besteht aus zwei Unteransichten:
+            <ul class="level1">
+                <li>Such-Kriterien für Stations-Suche.
+                </li>
+                <li>Stations-Liste mit dem Ergebnis einer Suche.</li>
+            </ul>
+            Zwischen den beiden Unteransichtenn kann hin- und her geschaltet werden.
+            <p>s. Menü-Elemente: <a  href="#ViewMap">Ansicht Karte</a></p>
+
+            <h2><a id="search_criteria">Unteransicht Such-Kriterien</a></h2>
+            <ul class="level1">
+                <li>Combo-Box <i>Stecker:</i>
+                    <br/>Klicken öffnet eine Liste der möglichen Stecker-Typen. Es können beliebig viele Stecker-Typen ausgewählt werden,
+                    auch keiner. Bei der Suche werden die Lade-Stationen ausgewählt, die mindestens einen der selektierten Stecker-Typen 
+                    mit der geforderten Ladeleistung aufweisen. 
+                    Wird kein Stecker-Type ausgewählt, dann wird unabhängig vom Stecker und der geforderten Ladeleistung gesucht.
+                </li>
+                <li>Combo-Box <i>Leistung:</i>
+                    <br/>Klicken der Combobox öffnet eine List mit vorhandenen minimalen Ladeleistungen von Ladepunkten.
+                    Eine Stationssuche liefert die Stationen, die einen Ladepunkt haben mit einem der selektierten Stecker und seiner Ladeleistung größer oder gleich dem ausgewählten Wert.
+                </li>
+                <li>Korridor oder Radius: maximale Entfernung von der Route oder Radius des Umkreises der zu suchenden Stationen 
+                    in km oder Meilen für Englisch(GB/US).</li>
+                <li>Combo-Box <i>Such-Modus:</i>
+                    <br/>Klicken öffnet eine Liste der möglichen Such-Modi:
+                    <ul class="level2">
+                        <li>Umkreis Standort: Suche um Standort des Standort-Dienstes im Umkreis 
+                            mit gegebenen Radius.
+                            <br/>Wenn der Suchmodus <i>Umkreis Standort</i> gewählt wird und kein
+                            Standort-Dienst aktiviert war, wird angefragt, 
+                            ob die Einstellungen <i>Standortzugriff</i> geöffnet werden sollen 
+                            oder der letzte bekannte Standort verwendet werden soll.
+                        </li>
+                        <li>Umkreis Adresse: Suche um Standort, der durch eine vom Benutzer 
+                            eingegebene Adresse bestimmt ist, im Umkreis mit gegebenen Radius.
+                            <br/>Ist der Modus <i>Umkreis Adresse</i> eingestellt, kann die 
+                            Adresse durch einen langen Klick auf die Combo-Box erneut eingegeben werden.
+                            <br/>Wenn der Suchmodus <i>Umkreis Adresse</i> gewählt wird und kein 
+                            Netzwerk aktiviert war, werden die Einstellungen des Telefons 
+                            geöffnet.
+                        </li>
+                        <li>Entlang Route: Suche entlang der Route mit maximalen Abstand von 
+                            der Route gegeben durch <i>Korridor</i></li>
+                        <li>An Ladestops: wie Modus <i>Entlang Route</i> beschränkt auf Umgebung von Ladestops. 
+                            Zusätzlich wird am Routenende eine Umgebungssuche durchgeführt, damit für die Rückfahrt aufgeladen werden kann.</li>
+                    </ul>
+                </li>
+                <li><a id="criteria_ranges">Reichweiten:</a>:
+                    <ul class="level2">
+                        <li>Reichweite nach <i>Ladestopp</i> in km: mit an Ladestopps erreichbaren Ladezustand der Batterien. Dieser liegt häufig unter der Batterie-Kapazität.
+                            (nur für Suche <i>An Ladestopps</i> erforderlich)</li>
+                        <li><i>Start-Reichweite</i> in Km: Reichweite bei Routenstart; diese kann größer als die <i>Reichweite nach Ladestopps</i> sein.
+                            <br/>Das berücksichtigt, daß eine Route mit voll aufgeladenen Batterien begonnen wird, die an Ladestops häufig nicht voll aufgeladen werden können.
+                            (nur für Suche <i>An Tankstopps</i>).</li>
+                    </ul>
+                </li>
+                <li>Schaltfläche <i>Finde Stationen</i>: startet die Suche nach Stationen.</li>
+                <li>Schaltfläche <i>Stations-Liste</i>: wechselt zur Unteransicht Stationen-Liste.</li>
+            </ul>
+
+            <p class="head"><a id="criteria_plus_version">Nur in Plus-Version:</a>
+            </p>
+            <ul class="level1">
+                <li>Kostenloses Laden: liefert Lade-Stationen, an denen kostenlos geladen werdenn kann.</li>
+                <li>Barrierfreies Zahlen: liefert Lade-Stationen, die ohne Vertrag mit den üblichen Mitteln - Bargeld, EC. o. Kreditkarte, beliebige RFID-Karte - nutzbar sind.
+                    <br/>Hinweis: Die Such-Kriterien <i>Barrierfreies Zahlen</i> und <i>Ladekarten</i> werden mit <i>Oder</i> verknüpft.
+                </li>
+                <li>Ladekarten: 
+                    Es wird eine Liste mit Mehrfachauswahl von möglichen Ladekarten gezeigt. Über der Liste steht ein Suchfeld, in das der Prefix von
+                    gesuchten Ladekarten eingegeben werden kann. Die Liste wird dann zu einer Ladekarte geblättert, die mit dem Prefix beginnt. 
+                    Die selektierten Ladekarten werdem mit <i>Oder</i> verknüpft. 
+                    <br/>Die von einer Ladestation akzeptierten Ladekarten werden in den Details der Station angezeigt.
+                </li>
+            </ul>
+            Die für den gewählten Such-Modus erforderlichen Stations-Daten werden erst geladen, nachdem die Suche nach Ladestationen gestartet wurde, 
+            wenn sie nicht bereits geladen waren. Ein bereits vorhandenes Suchergebnis wird erst dann überschrieben.
+            <br/>Der Stand aller veränderlichen Felder wird nach einer erfolgreich Stations-Suche gesichert 
+            und nach Neustart von Electro Station Finder restauriert.
+
+            <h2>Unteransicht Stations-Liste</h2>
+            Die Stations-Liste enthält die gefundenen Lade-Stationen mit folgenden Informationen:
+            <ul class="level1">
+                <li> Name</li>
+                <li>Adresse</li>
+                <li>Nicht bestätigt</li>
+                <li>Stecker-Typen mit Anzahl der Ladesäulen und Leistung in KW</li>
+                <li>Distanz der Tankstelle vom Routenanfang oder vom Standort und für die Suche entlang der 
+                    Route die Distanz von der Route (Luftlinie).</li>
+                <li>Geographishe Breite und Länge in Grad.</li>
+                <li>Hyperlink zur Lade-Station</li>
+            </ul>
+            Es gibt die folgenden Bedienelemente:
+            <ul class="level1">
+                <li>Schaltfläche <i>Anfang</i>:
+                    <br/>Springt zum Anfang der Stations-Liste.
+                </li>
+                <li>Schaltfläche <i>Speichern</i>:
+                    <br/>Speichert die Stations-Liste in einer Html-Datei auf dem 
+                    externen Speicher (z.B. SD-Karte). Diese kann wieder importiert werden 
+                    (s. Menü-Element <i>Import</i>.
+                </li>
+                <li>Schaltfläche <i>Such-Kriterien</i>:
+                    <br/>Wechselt zur Unteransicht <i>Such-Kriterien</i>
+                </li>
+                <li>Hyperlink Stations-Name:
+                    <br/>Drücken des blauen Hyper-Links selektiert den
+                    Stations-Marker auf der Karte und öffnet ein Info-Fenster mit den gleichen Informationen einer Station in der Stations-Liste.. 
+                    Das wird vollständig sichtbar, wenn die Ansicht <i>Stationen</i>
+                    in den Hintergrung verschoben wurde.
+                    <br/> Wird in der Ansicht <i>Karte</i> eine Station selektiert, dann wird nach 
+                    Umschalten in die Ansicht <i>Stationen</i>zu dieser Station gesprungen.
+                </li>
+            </ul> Klicken auf das Info-Fenster öffnet die Details der Lade-Staion mit den folgenden Angaben:
+            <ul class="level1">
+                <li> Name</li>
+                <li>Adresse</li>
+                <li>Stecker-Typen mit Anzahl der vorhandenen Ladesäulen und Leistung in KW</li>
+                <li>Betreiber</li>
+                <li>Netzwerk</li>
+                <li>Bestätigt</li>
+                <li>Öffnungszeiten</li>
+                <li>Lage</li>
+                <li>Barrierefrei</li>
+                <li>Kosten mit optionaler Beschreibung und Angaben zum freien Parken und Laden</li>
+                <li>Status: wenn nicht OK mit Beschreibung der Störung und Datum der Störmeldung</li>
+            </ul>
+
+            <h1><a id="ViewImport">Ansicht Import</a></h1>
+            In der Ansicht <i>Import</i> kann in den Dateien des externen Speichers die 
+            zu importierende Html-Datei mit einer Stations-Liste ausgewählt werden.
+            <br/>Mit <i>Öffnen</i> wird diese Datei angezeigt. Wird auf den blauen Link einer 
+            Station gedrückt, wird der Dialog zur Auswahl des Navigations-Systems geöffnet, 
+            mit dem zu der gewählten Station navigiert werden kann.
+            <p>Das ist sinnvoll einzusetzen, wenn keine Internet-Verbindung verwendet 
+                werden kann oder Roaming-Gebühren vermieden werden sollen. Dazu wird eine 
+                Stations-Liste in einer Wlan-Umgebung vorbereitet und gespeichert. Unterwegs
+                wird diese dann importiert, um zu einer ausgewählten Station zu navigieren.                
+            </p>
+            Menü-Einträge:
+            <ul class="level1">
+                <li><i>Hole Datei:</i> öffnet den Dialog zur Auswahl der Stations-Liste.
+                </li>
+                <li><i>Anfang:</i> springt zum Anfang der Liste.
+                </li>
+            </ul>
+
+            <h1><a id="Other_Apps">Weitere Anwendungen des Autors</a></h1>
+            Android App zur Suche von Erdgas (Cng)- oder Autogas (Lpg)-Tankstellen
+            <p>
+                Kostenpflichtige Version: <a href="https://play.google.com/store/apps/details?id=cnglpg.finder.plus">
+                    <b>Cng/Lpg Finder Plus</b></a>
+            </p>
+            <p>
+                Kostenlose Version: <a href= "https://play.google.com/store/apps/details?id=cnglpg.finder">
+                    <b>Cng/Lpg Finder</b></a>
+            </p>
+
+            Android App zur Suche von Elektro-Ladestationen in USA:
+            <p>
+                Kostenpflichtige Version: <a href="https://play.google.com/store/apps/details?id=evse.finder.plus">
+                    <b>EV Station Finder Plus USA</b></a>
+            </p>
+            <p>
+                Kostenlose Version: <a href= "https://play.google.com/store/apps/details?id=evse.finder">
+                    <b>EV Station Finder USA</b></a>
+            </p>
+
+            <h1><a id="ChangeLog">Änderungen</a></h1>
+            
+             <h2>Electro Station Finder freie Version V3.2.5</h2>
+            Veröffentlicht: 27.01.2024
+            <ul class="level1">
+                 <li>Fehlerbehebung: Ohne Internet-Verbindung hängt die App beim Start oder wird geschlossen.</li>
+                 <li>Neu: Aktualisierte Ladekarten.</li>
+            </ul>
+            
+            <h2>Version V3.2.3</h2>
+            Veröffentlicht: 26.01.2024
+            <ul class="level1">
+                <li>Neu: Anpassung an geforderte Google Richtlinien.</li>
+                <li>Neu: Aktualisierte Ladekarten.</li>
+            </ul>
+
+            <h2>Version V3.1.2</h2>
+            Veröffentlicht: 13.10.2023
+            <ul class="level1">
+                <li>Neu: Aktualisierte Ladekarten.</li>
+                <li>Fehlerbehebung: Erzwungener Abbruch nach wiederholter Suche nach Stationen.  
+                </li>
+                 <li>Fehlerbehebung: einige Kurz-Meldungen wurden auf einigen Geräten abgeschnitten.</li>
+            </ul>
+
+            <h2>Version V3.1.0</h2>
+            Veröffentlicht freie Version: 18.08.2023
+            Veröffentlicht Plus-Version: 24.08.2023
+            <ul class="level1">
+                <li>Neu freie Version: Beim Start wird Werbung angezeigt. 
+                    Die Plus-Version ist ohne Werbung; Details einer Station enthält Kosten der Ladekarten.</li>
+                <li>Neu: Aktualisierte Ladekarten.</li>
+                <li>Fehlerbehebung: Korrektur von Google Richtlinien-Verstößen.</li>
+                <li>Fehlerbehebung: Erzwungener Abbruch, wenn eine Fehler-Dialog angezeigt 
+                    werden soll und die aufrufende Komponente nicht sichtbar ist.</li>
+                <li>Fehlerbehebung: Erzwungener Abbruch nach Abschluß einer Eingabe 
+                    durch die Engabe-Taste einer Tastatur.</li>
+            </ul>
+
+            <h2>Version V3.0.3</h2>
+            Veröffentlicht: 29.06.2023
+            <ul class="level1">
+                <li>Neu: Eingabe-Felder in <i>Wegepunkte</i> und <i>Standort-Adresse</i> können mehrzeilig sein.</li>
+                <li>Neu: Anpassung  der Fenster-Weite von Dialogen, Routen- und Stations-Leisten und Info-Fenstern von Markern
+                    an Bildschirm-Weite des Gerätes und an Weite im Längs-/Quer-Format.</li>
+                <li>Neu: Anpassungen an Android 14.</li>
+                <li>Neu: Aktualisierte Ladekarten.</li>
+                <li>Fehlerbehebung Android 13: Der Zurück-Button schließt die App, 
+                    anstatt erst der Reihe nach offene Fenster zu schließen wie 
+                    Info-Fenster, linke oder rechte Einschub-Leiste.</li>
+            </ul>
+
+            <h2>Version V2.9.6</h2>
+            Veröffentlicht: 10.02.2023
+            <ul class="level1">
+                <li>Neu: Wenn im Wegepunkt-Dialog eine selektierte Station der Liste der Wegepunkt hinzugefügt wird,
+                    dann wird die Adresse des Wegepunktes der Liste hinzugefügt, anstatt der geographischen Koordinaten.</li>
+                <li>Neu: Aktualisierte Ladekarten.</li>
+                <li>Fehlerbehebung: Anklicken des Titels einer Station in der Liste der gefundenen Stationen hat nicht immer das Info-Window der Station auf der Karte geöffnet.</li>
+
+            </ul>
+
+            <h2>Version V2.8.4</h2>
+            Veröffentlicht: 01.09.2022
+            <ul class="level1">
+                <li>Neu: Anpassungen an Android 13.0.</li>
+                <li>Neu: Aktualisierte Ladekarten.</li>
+                <li>Neu Plus-Version: Aktualisierte Ladekarten-Kosten.</li>
+                <li>Fehlerbehebung: für Android >=6.0: Wenn beim Start der App die Berechtigung zum Zugriff auf den Standort angefragt wurde, dann wurde die 
+                    Startaktion <i>Umgebungssuche</i> nicht ausgeführt.</li>
+            </ul>
+
+            <h2>Version V2.7.9</h2>
+            Veröffentlicht freie Version: 10.02.2022; Plus Version: 09.06.2022
+            <ul class="level1">
+                <li> Neu Plus-Version: Die Ladekarten-Kosten wurden zu den Ladekarten in Statiions-Details hinzugefügt.</li>
+                <li>Neu: Die Stations-Details können zusätzlich  aus der Stations-Liste aufgerufen werden.</li>
+                <li>Neu: Aktualisierte Ladekarten.</li>
+                <li>Fehlerbehebung: Wenn die Addresse einer Station ein Apostroph enthält, 
+                    dann öffnet ein Klick auf den Stations-Titel in der Stations-Liste nicht das Info-Window auf der Karte.</li>
+                <li>Fehlerbehebung: Wenn die Entwickler-Option <i>Aktivitäten nicht spreichern</i> selektiert war, dann wurde in Station-Details
+                    der Link <i>Station Web-Seite</i> beim ersten Klick geöffnet, nicht aber bei folgenden.</li>
+            </ul>
+            <h2>Version V2.7.2</h2>
+            Veröffentlicht: 08.11.2021
+            <ul class="level1">
+                <li>Neu: Die Übersicht der Stations-Liste wurde ergänzt um Start- und End-Addresse der Route für eine routen-basierte Suche,
+                    um die Addresse für die Suche um eine Addresse oder um die Koordinaten des aktuellen Standortes für die Suche um einen Standort.
+                <li>Neu: Anpassungen an Android V12.0</li>
+                <li>Neu: Aktualisierte Ladekarten.</li>
+            </ul>
+
+            <h2>Version V2.6.6</h2>
+            Veröffentlicht: 16.05.2021
+            <ul class="level1">
+                <li>Neu: Die Stations-Liste wird im gemeinsamen Speicher abgelegt, anstelle im app-spezifischen Speicher. Andere Apps wie Datei-Manager
+                    können darauf zugreifen.</li>
+                <li>Neu: Alle Suchkriterien wurden im Überblick der Stations-Liste ergänzt. </li>
+                <li>Neu: Die Anzeige-Daten der Stationen wurden ergänzt um die Lage der Station zur Route rechts oder links.</li>
+                <li>Neu: Aktualisierte Ladekarten.</li>
+                <li>Fehlerbehebung: die Anzahl gefundener Staionen in der Kopfzeile der Stations-Liste war falsch.</li>
+                <li>Fehlerbehebung Android Version 11: die Navi-SYsteme Sygic, OsmAnd and HERE WeGo konnten nicht gestartet werden.</li>
+            </ul>
+
+            <h2>Version V2.6.3</h2>
+            Veröffentlicht: 02.12.2020
+            <ul class="level1">
+                <li>Neu: Anpassungen an Android 11.</li>
+                <li>Neu: Alle Dialoge z.B. für Wegepunkte oder Einstellungen werden restauriert nach Restart vom Hintergrund.</li>
+                <li>Neu: Aktualisierte Ladekarten.</li>
+                <li>Fehlerbehebung: Wenn für die Sicherung von Stations-Details viele Dateien angezeigt werden, dann sind Eingabefeld und Buttons nicht mehr sichtbar. </li>
+                <li>Fehlerbehebung: Wenn für ein Eingabefeld die Tastatur angezeigt wird und die App in den Hintergrund gesetzt und wieder gestartet wird, 
+                    ist die Tastatur nicht mehr geöffnet.</li>
+            </ul>
+
+            <h2>Version V2.5.2</h2>
+            Veröffentlicht:29.05.2020
+            <ul class="level1">
+                <li>Neu: Fehlende Ladekarten wurden ergänzt.</li>
+                <li>Fehlerbehebung: Wenn ein Eingabe-Feld den Focus hat und der Fortsetzungs-Button der aktuellen Ansicht anstelle des Fertig-Buttons der Tastatur geklickt wurde, 
+                    dann wird die angezeigte Tastatur nicht geschlossen.</li>
+                <li>Fehlerbehebung: Wenn beim <i>Import</i> von Lade-Stationen der <i>Öffnen</i>-Button durch Auswahl einer Datei aktiviert wurde, 
+                    dann wird dieser nach Rotation des Gerätes deaktiviert.</li>
+            </ul>
+
+            <h2>Plus Version V2.4.3 und Freie Version 2.4.6</h2>
+            Veröffentlicht: 09.03.2020
+            <ul class="level1">
+                <li>Neu: In den Stations-Details ist die Liste der Ladekarten einer Station alphabetisch sortiert.</li>
+                <li>Neu Plus-Version: Wenn die Liste der Ladekarten geöffnet wird, wird sie auf die erste gewählte Ladekarte positioniert.</li>
+                <li>Neu: Wenn der Standortdienst nicht aktiviert ist, wird der Benutzer aufgefordert, diesen zu aktivieren.</li>
+                <li>Fehlende Lade-Karten wurden ergänzt.</li>
+            </ul>
+
+            <h2>Version V2.3.8</h2>
+            Veröffentlicht: 20.11.2019
+            <ul class="level1">
+                <li>Fehlende Lade-Karten wurden ergänzt.</li>
+                <li>Fehlerbehebung: die oberen und unteren Grenzen für Korridor/Radius, Reichweite und Rest-Reichweite waren für die Sprachen Englisch (GB und US) in KM und nicht in Meilen angegeben.</li>
+                <li>Fehlerbehebung: Erzwungener Abbruch, wenn Details einer Station angefordert wurden und das aktuelle Fenster geschlossen wurde.</li>
+                <li>Fehlerbehebung: Für kleine Bildschirm-Breiten ist das Feld <i>Korridor/Radius</i> nicht oder nur teilweise sichtbar.</li>
+            </ul>
+
+            <h2>Version V2.3.1</h2>
+            Veröffentlicht: 31.07.2019
+            <ul class="level1">
+                <li>Neu: Benutzer wird informiert, wenn eine neue Version vorliegt(ab Android-Version 5.0).</li>
+                <li>Neu: Anpassungen an Android v9.+</li>
+                <li>Neu: Fehlende Ladekarten hinzugefügt.</li>
+
+            </ul>
+
+            <h2>Version V2.2.6</h2>
+            Veröffentlicht: 06.06.2019
+            <ul class="level1">
+                <li>Hinweis: Wegen Missbrauchs eines Api-Schlüssels für die Routen-Suche durch andere wurde dieser ersetzt.
+                    Der alte Schlüssel wird bald gelöscht. Alte Versionen können dann keine Route mehr anfordern.</li>
+                <li>Neu: Neue Ladekarten wurden ergänzt.</li>
+            </ul>
+
+
+            <h2>Version V2.2.5</h2>
+            Veröffentlicht: 15.05.2019
+            <ul class="level1">
+                <li>Änderung: Wenn der Such-Modus 'Umkreis Adresse' eingestellt ist, dann öffnet eine Klick darauf den Dialog zur Änderung der Adresse.</li>
+                <li>Neu: Mit Karten-Maßstab abhängig von Zoom-Stufe und gepgraphischer Breite.</li>
+                <li>Neu: Verbesserungen der Benutzer-Oberfläche.</li>
+                <li>Neu: Ein langer Klick auf auf einen blauen Pfeil oder den Maßstab in der Karten-Ansicht zeigt einen Hinweis an.</li>
+                <li>Neu: Fehlende Ladekarten wurden ergänzt.</li>
+                <li>Anpassungen der Stecker-Namen.</li>
+                <li>Fehlerbehebung: Auf einigen Geräten wurde beim Suchmodus <i>Umkreis Adresse</i> die Adress-Suche abgebrochen.</li>
+                <li>Fehlerbehebung: Wenn auf dem Geräte die Sprache Englisch-UK oder Englisch-US eingestellt war, dann wurden
+                    Entfernungen in KM statt in Meilen angegeben.</li>
+                <li>Fehlerbehebung: Wenn für eine Station keine Ladekarten erforderlich waren, dann wurde die Anforderung der Stations-Details mit Fehler abgebrochen.</li>
+            </ul>
+            Plus-Version:
+            <ul class="level1">
+                <li>Änderung  Wenn der Such-Modus 'Umkreis Adresse' eingestellt ist, dann öffnet eine Klick darauf den Dialog zur Änderung der Adresse.</li>
+                <li>Neu: Fehlende Ladekarten wurden ergänzt.</li>
+                <li>Fehlerbehebung: Auf einigen Geräten wurde beim Suchmodus <i>Umkreis Adresse</i> die Adress-Suche abgebrochen.</li>
+                <li>Fehlerbegebung: Wenn auf dem Geräte die Sprache Englisch-UK oder Englisch-US eingestellt war, dann wurden
+                    Entfernungen in KM statt in Meilen angegeben.</li>
+            </ul>
+
+            <h2>Version V2.2.1</h2>
+            Plus-Version veröffentlicht: 13.03.2019
+            <ul class="level1">
+                <li>Neu: Mit Karten-Maßstab abhängig von Zoom-Stufe und gepgraphischer Breite.</li>
+                <li>Neu: Verbesserungen der Benutzer-Oberfläche. </li>
+                <li>Neu: Ein langer Klick auf auf einen blauen Pfeil oder dem Maßstab in der Karten-Ansicht zeigt einen Hinweis. </li>
+                <li>Neu: Fehlende Ladekarten und Stecker wurden ergänzt.</li>
+                <li>Fehlerbehebung: Wenn für eine Station keine Ladekarten erforderlich waren, dann wurde die Anforderung der Stations-Details mit Fehler abgebrochen.</li>
+            </ul>
+
+            <h2>Version V2.1.0</h2>
+            <ul class="level1">
+                <li>Fehlerbehebung: Erzwungener Abbruch, wenn der Import einer Stations-Liste durch den Home-Button pausiert und wieder aktiviert wurde
+                    und die Entwickleroption <i>Aktionen nicht speichern</i> eingestellt war.</li>
+                <li>Fehlerbehebung: Gelegentlich kann keine Verbindung zum Daten-Server aufgebaut werden, obwohl eine Internet-Verbindung
+                    vorhanden ist (betrifft Geräte mit Android-Version &lt;6.0).</li>
+                <li>Fehlerbehebung: Fehlende Ladekarten wurden ergänzt.</li>
+                <li>Fehlerbehebung (Plus-Version): Wenn als Suchkriterium eine Ladekarte mit einem Zwischenraum im Namen z.B. 'AESE Card' 
+                    oder wenn mehr als 2 Ladekarten ausgewählt wurden, dann wurde die Suche mit der Fehlermeldung <i> ...no internet connection...</i>
+                    abgebrochen.</li>
+                <li>Fehlerbehebung (Plus-Version): Wenn das Suchkriterium <i>Stecker</i> geändert wurde, wurden die geänderten Stecker bei 
+                    der Stations-Suche nicht berücksichtigt. Sie wurden erst nach einem Restart der App berücksichtigt.</li>
+            </ul>
+
+            <h2>Version V2.0.0</h2>
+            <ul class="level1">
+                <li>Neue kostenpflichtige Version Electro Station Finder Plus EUR: Zusätzliche Such-Kriterien <i>Freies Laden</i>. <i>Barierefreies Zahlungssystem</i>
+                    und <i>Lade-Karten</i>.</li>
+                <li>Neu: Mit Anzeige der akzeptierten Ladekarten in den Stations-Details.</li>
+                <li>Neu: OsmAnd Navi wird unterstützt.</li>
+                <li>Fehlerbehebung: Wenn kein Stecker-Typ und Leistung >2 gewählt wurde, dann hat die gewählte Leistung keine Auswirkung.</li>
+                <li>Fehlerbehebung: Bei Geräten mit Android V9.0 wird die Liste der Navigationssysteme nicht vollständig angezeigt und war nicht verschiebbar.</li>
+                <li>Fehlerbehebung: Erzwungener Abbruch bei Geräten mit Android 4.3, wenn ein Station-Marker selektiert wurde.</li>
+            </ul>
+
+            <h2>Version V1.1.1</h2>
+
+            <ul class="level1">
+                <li>Fehlerbehebung in V1.1.0: Erzwungenener Stop, wenn auf das Info-Window eines Routenschritt-Marker geklickt wurde.</li>
+            </ul>
+
+            <h2>Version V1.1.0</h2>
+            <ul class="level1">
+                <li>Neu: Ein offenes Info-Window oder offene Routen/Stations-Ansicht wird durch den Zurück-Button geschlossen, anstatt die App zu beenden.
+                </li>
+                <li>Neu: Klicken auf den blauen Link eines Routen-Schritts in den Routen-Details markiert die Position des Schritts und zentriert die Karte an dieser Position.</li>
+                <li>Änderung: Eine Ladestation wird akzeptiert, wenn sie einen der geforderten Steckertypen enthält und dessen Leistung größer oder gleich der geforderten Leistung ist.</li>
+                <li>Änderung: Bisher war der Bereich, in dem Ladestationen um einen Tankstopp gesucht wurden konstant. Er steigt jetzt mit der Reichweite an bis zu einem Grenzwert von 60 km.</li>
+                <li>Änderung: Die obere Grenze der <i>Start-Reichweite</i> (früher Rest-Reichweite) ist jetzt die gleiche wie für die <i>Reichweite nach Tankstopps</i> (früher Reichweite).
+                    <br/>Damit kann die <i>Start-Reichweite</i> größer als die <i>Reichweite nach Tankstopps</i> sein.
+                </li>
+                <li>Änderung: Im Such-Modus <i>An Tankstopps</i> wird am Routenende zusätzlich eine Umgebungssuche durchgeführt, damit für die Rückfahrt aufgeladen werden kann.</li>
+                <li>Fehlerbehebung: Erzwungener Abbruch, wenn Wegepunkte geöffnet werden und noch kein Station-Marker selektiert war.</li>
+                <li> Hinweis: Ein Upgrade von V1.0.3 oder kleiner setzt die Einstellungen für Route und Station auf die Voreinstellungen zurück.</li>
+            </ul>
+
+            <h2>Version V1.0.4</h2>
+            <ul class="level1">
+                <li>Neu: Zusätzliches Such-Kriterium <i>Minimale Lade-Leistung</i>.</li>
+                <li>Neu: Wegepunkte können in beliebiger Reihenfolge in eine Liste eingetragen werden und auch gelöscht werden. Wenn bereits Lade-Stationen gefunden wurden, 
+                    kann eine selektierte Station der Liste hinzugefügt werden. </li>
+                <li>Änderung: Für Such-Modus <i>An Tank-Stopps</i> wurden minimale Reichweite auf 30 km und minimale Rest-Reichweite auf 10 km gesetzt.
+                    (auf Wunsch von Roller-Fahrern)</li>
+                <li>Fehlerbehebung: Erzwungener Stopp, wenn auf Info-Window eines Routen-Markers geklickt wurde. </li>
+                <li>Hinweis: Die Installation von V1.0.4 setzt die Einstellungen für Route und Station auf die Voreinstellungen zurück.</li>
+            </ul>
+
+            <h2>Version V1.0.3</h2>
+            <ul class="level1">
+                <li>Neu: Mit speziellem Marker-Icon für defekte Lade-Stationen.</li>
+                <li>Neu: Checkboxen statt Radio-Buttons in Stecker-Liste.</li>
+                <li>Neu: Mit Link auf die Stations Web-Site in Station-Details.</li>
+                <li>Fehlerbehebung: Erzwungener Abbruch, wenn die Stations-Suche z.B. durch Home-Button abgebrochen wurde.</li>
+                <li>Fehlerbehebung: Erzwungener Abbruch, wenn die Karte zu langsam geladen wurde.</li>
+
+            </ul>
+
+            <h2>Version V1.0.2</h2>
+            <ul class="level1">
+                <li>Neu: In <i>Einstellungen</i> der Aktions-Leiste kann der Benutzer festlegen, ob beim Start der App mit der Start-Aktion <i>Routen-Anforderung</i> oder 
+                    der <i>Umgebungs-Suche</i> nach Lade-Stationen begonnen wird. Weiter kann festgelegt werden,daß die Start-Aktion mit den zuletzt verwendeten 
+                    Such-Kriterien sofort ausgeführt werden soll.</li>
+                <li>Neu: Nach einer Suche nach Lade-Stationen wird die Karte so eingestellt, daß sie alle gefundenen Stationen umfaßt.</li>
+                <li>Fehlerbehebung: Aktuelle Stecker-Typen wurden   immer gesichert. Alle Such-Kriterien werden jetzt nach jeder erfolgreichen
+                    Suche gesichert.</li>
+                <li>Fehlerbehebung: Erzwungener Stopp, wenn Stecker-Typen nicht gesichert wurden.</li>
+                <li>Fehlerbehebung: Erzwungener Stopp, wenn App beendet oder in den Hintergrund verschoben wurde.</li>
+                <li>Fehlerbehebung: erzwungener Stopp nachdem das ausgewähle Navi <i>Here WeGo</i> beendet wurde und wenn in <i>Entwickler-Optionen</i> des Geräts <i>Aktion nicht speichern</i> gewählt wurde.</li>
+            </ul>
+            <h2>Version V1.0.1</h2>
+            <ul class="level1">
+                <li>Fehlerbehebung:In Routen-Details wurde bei einer Route mit mehrerem Zwischenzielen eine falsche Start-Adresse angegeben.</li>
+            </ul>
+
+            <h1><a id="Contact">Kontakt</a></h1>
+            Feedback ist hoch willkommen, das Sie an folgende Adresse senden können:
+            <p class="link_fontsize">
+                <a href="mailto:ostermann.bernd@googlemail.com">
+                    <b>ostermann.bernd@googlemail.com</b>
+                </a>
+            </p>
+
+            <h1><a id="Copyright">Copyright und Danksagung</a></h1>
+            <ul class="level1">
+                <li>@Copyright (c) 2018 Bernd Ostermann</li>
+                <li>Danksagung an den Lieferanten der Stations-Daten GoingElectric
+                    <p class="link_fontsize">
+                        <a href="https://www.goingelectric.de/">
+                            <b>https://www.goingelectric.de/</b> 
+                        </a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=10,minimum-scale=1,user-scalable=yes"/>
+        <title>Help about Electro Station Finder EUR</title>
+
+        <style>
+            body {
+                font-family: Arial,Helvetica,sans-serif;
+                background-color: black;
+                color:white;
+                font-size: 1.0em
+            }
+            A:link{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                color:#306EFF;
+            }
+            A:visited{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                color:#FF00A0;
+            }
+
+            A:hover{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                color:cyan;
+            }
+            A:active{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                color: red;
+            }
+
+            h1 {
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+            h2 {
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                font-weight: bold;
+                margin-left: 1.0em;
+            }
+            h3{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1em;
+                font-weight: bold;
+                margin-left: 1.5em;
+            }
+            p.head{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                font-weight: bold;
+            }
+            p.subh{
+                font-weight: bold;
+                font-size: 0.9em;
+                margin-left: 1.5em;
+            }
+            .link_fontsize{
+                font-size: 1.1em;
+            }
+            DIV {
+                counter-reset: chapter;      /* Create a chapter counter scope */
+            }
+            H1:before {
+                content: counter(chapter) ". ";
+                counter-increment: chapter;  /* Add 1 to chapter */
+            }
+            H1 {
+                counter-reset: section;      /* Set section to 0 */
+            }
+            H2:before {
+                content: counter(chapter) "." counter(section) " ";
+                counter-increment: section;
+            }
+
+            ul.level1 {
+                margin-left: 1.5em;
+                padding-left: 0em;
+                list-style-type: square;
+            }
+            ul.level2 {
+                margin-left: 2.0em;
+                padding-left: 0em;
+                list-style-type: circle
+            }
+            ul.level3 {
+                margin-left: 2.5em;
+                padding-left: 0em;
+                list-style-type: disc
+            }
+            li{
+                margin-top: 0.5em
+            }
+            div.level2{
+                margin-left: 1.5em
+            }
+            div.level3{
+                margin-left: 2.0em
+            }
+        </style>
+
+    </head>
+    <body>
+        <p class="head" style="text-align: left;font-size:1.4em">
+            Help about Electro Station Finder EUR
+        </p>
+
+        <p class="head"> Version</p>
+        <ul class="level1">
+            <li>Version: Electro Station Finder EUR: V3.2.5</li>
+            <li>Version: Electro Station Finder Plus EUR: V3.2.5</li>
+            <li>Required Android version: V4.4 or higher</li>
+            <li>Required Google Play Services installed</li>
+            <li>Developed and tested under: Android: V14.0</li>
+        </ul>
+        <p class="head">Check for updates</p>
+        <div style="position: relative; float:left; margin-left: 1.0em;width: 5.3em; height: 5.3em;">
+            <img src="ic_launcher_playstore.png" alt="market icon"/>
+        </div>
+        <div class="link_fontsize" style="position: relative; float:left; width:auto; height: 5.3em;">
+            <a href="https://play.google.com/store/apps/details?id=electro.station.finder">
+                <b>Electro Station Finder EUR</b></a>
+            <p>
+                <a href="https://play.google.com/store/apps/details?id=electro.station.finder.plus">
+                    <b>Electro Station Finder Plus EUR</b></a>
+            </p>
+
+        </div>
+        <hr style="clear: both"/>
+
+        <p class="head">Contents:
+        </p>
+
+        <div  id="contents">
+            <h1><a href="#About_EVSE_Finder">About Electro Station Finder</a></h1>
+            <h1><a href="#LanguageSetting">Language setting</a></h1>
+            <h1><a href="#UserViews">User ViewMaps</a></h1>
+            <h1><a href="#ViewRouteForm">View Route</a></h1>
+            <h1><a  href="#ViewMap">View Map</a></h1>
+            <h1><a href="#ViewSettings">View Settings</a></h1>
+            <h1><a href="#ViewStationsView">View  Stations</a></h1>
+            <h1><a href="#ViewImport">View Import</a></h1>
+            <h1><a href="#Other_Apps">Other Apps of the author</a></h1>
+            <h1><a href="#ChangeLog">Change Log</a></h1>
+            <h1><a href="#Contact">Contact</a></h1>
+            <h1><a href="#Copyright">Copyright and Acknowledgement</a></h1>
+            <hr/>
+        </div>
+
+        <div  id="helptext">
+            <h1><a id="About_EVSE_Finder">About Electro Station Finder EUR</a></h1>
+            Electro Station Finder calculates a route and searches for electric charging stations. Charging stations can be 
+            searched along this route or around a location.
+            <br/>Charging stations along the route can be restricted to the vicinity of refuelling stops, whose distance from
+            each other is the cruising range with the achievable loading state of batteries at refueling stations, 
+            which often is lower than 100% of the capacity of the batteries.
+            <p>
+                In <i>Settings</i> of the action bar the user can configure the start action, which is shown at start of the app. The start action can be
+                the <i>Route Request</i> or the <i>Circular Search</i> of charging stations. The start action may be shown or executed immendiately applying
+                the last used search criteria.
+            </p>
+            <p>
+                The route is shown on the map as a red line with route markes at start, intermediate destinations and final destination. 
+                Charging stations are presented as cluster or single station markers dependent on the zoom level.
+                <br/>A navigation system can be selected for navigating from the current position to the selected marker.
+            </p>
+            <p>
+                The list of stations can be saved to sd card. It can be imported 
+                to navigate to a selected station. This is done without 
+                using the internet.
+            </p>
+            <p> There are a free version Electro Station Finder EUR and a paid version Electro Station Finder Plus EUR.
+                The Plus version offers additional search criteria <i>Free Charging</i>, <i>Barrier Free Payment system</i>
+                and <i>Charge Cards</i>.
+            </p>
+            <p>
+                The station data are provided by 
+                <a href="https://www.goingelectric.de/"><b>https://www.goingelectric.de/</b></a>
+                <br/>Electro Station Finder downloads the required station data for each new route request and for each new location.
+            </p>
+            <p>
+                GoingElectric provides and maintains station data nearly for all European countries. Completeness and actuality depends on registered users,
+                who can send updates of the stations. This works pretty well for Austria, Switzerland and Germany. Other countries may lack of completeness and actuality.
+            </p>
+
+            <h1><a id="LanguageSetting">Setting the language</a></h1>
+            Electro Station Finder is bilingual. If the language of the phone was set in 'Settings',
+            'Language &amp; Keyboard' or 'Language &amp; Input'to German, all texts of Electro Station Finder appear in German,
+            for all other languages in English.
+            <br/>If the language was set to English(UK) or English(US), distances are measured in miles.
+            <br/>If the language is modified, while Electro Station Finder is active, then generated lists
+            of a route and stations are shown in the previous language as long as these lists are generated again.
+
+            <h1><a id="UserViews">User views</a></h1>
+            The user interacts with Electro Station Finder by user views.
+            <br/>There are the following user views:
+            <ul class="level1">
+                <li>The application starts with the view <i>Map</i> and shows an empty map centred 
+                    at the current location, it this is known by the phone After a route was calculated and after loading stations 
+                    are present, the stations are shown on the map.
+                </li>
+                <li>View <i>Route</i> contains a form to request a new route and shows a
+                    formerly calculated route.
+                </li>
+                <li>View <i>Stations</i> searches for charging stations
+                    and shows a short description of the station.</li>
+                <li>With view <i>Import</i> a list of stations, which was stored on external 
+                    storage, can be imported.
+                </li>
+            </ul>
+            Navigating to other views is done by option menus. 
+            The menu items are shown in the action bar on top of the screen. Dependent on 
+            available space an item is shown with its icon and with title. If 
+            the space is not sufficient, the icons of the first items are shown; the remaining 
+            items are shown by clicking the vertical three dots.
+            <p>
+                Clicking the left icon (3 horizontal lines or 
+                an arrow to the left) in the action bar at the top of the screen toggles between the views <i>Route</i>, <i>Map</i> and 
+                <i>Stations</i>. The same can be done by swiping from the left side of the screen or back 
+                or by swiping from the right side of the screen or back.
+                <br/>The views <i>Route</i> and <i>Stations</i> cover a part of the map, which is slightly dimmed.
+            </p>
+            <p>
+                Clicking the back key immediately finishes a view or dialog and returns
+                to the view, which initially invoked it. The data of the finished view are lost.
+            </p>
+
+            <h1><a id="ViewRouteForm">View Route</a></h1>
+            For requesting a route enter the address of the start location
+            into the 'From' field and the address of the final destination into  'To' field.(Since V1.0.4 without waypoints separated by semicolon ';').
+            <p>
+                Button <i>Waypoints</i> opens a list of waypoints. A waypoint can be added as an address. If charging stations are already found, a station can be added
+                as a waypoint by selecting it on the map and adding it in the view <i>Waypoints</i> or by entering the station number.
+                <br/>Adding a charging station as waypoint will show the loop way from the route to the station after the next route request.
+            </p> 
+            By clicking the black cross on orange background a waypoint can be removed. The order of waypoints is arbitrary.
+            <br/>By clicking the button <i>Ready</i> the actual waypoints will be applied in requesting a route.
+
+            <br/>Addresses may be in the form used by Google Maps, for example:
+            <ul class="level1">
+                <li>complete address:Zip code, City, street house number, country name
+                    or country code
+                    <br/>example: 4056, Basel, Hebelstrasse 11, CH  </li>
+                <li>incomplete address: City or City, street  </li>
+                <li>geographical latitude, longitude in decimal degrees
+                    <br/>example: 49.0488, 11.1429
+                </li>
+            </ul>
+            If the the <i>From</i> field is long clicked, the last known position of the phone
+            is used as the From address. Google's Location Service must be activated in the 
+            phone's Settings.
+
+            <p>Buttons:</p>
+            <ul class="level1">
+                <li>Button Waypoints: opens the view for editing waypoints.</li>
+                <li>Swap From/To Address:
+                    <br/>Start address and final destination address are swapped.
+                </li>
+                <li>Avoid Highways: if checked highways will be avoided.</li>
+                <li>Get Route: get the route.</li>
+            </ul>
+            <p>Menu items in the action bar: <a  href="#ViewMap">s. View Map</a></p>
+
+            When the result of the route request is available the route steps
+            are shown in a list and the route is displayed on the map.
+            <br/>After a successful route request the settings of the request are saved and 
+            restored after restart of Electro Station Finder.
+
+            <h1><a id="ViewMap">View Map</a></h1>
+            The view <i>Map</i> presents the requested route and the searched stations on the map. 
+
+            <h2><a id="UseGoogleMaps"> Use of Google Maps</a></h2>
+            Electro Station Finder is based on Google Maps, which requires that Google Play Services are installed on the
+            device. If not, the user is requested to install these services from Google Play Store.
+            This requires that the app Google Play Store is installed and the device is signed on with its 
+            GoogleMail account.
+
+            <h2>Menu items</h2>
+            The actionbar on top of the screen contains the menu items. It can 
+            be accessed by the views <i>Route</i>, <i>Map</i> and <i>Stations</i>.
+            <ul class="level1">
+                <li>Settings:
+                    <ul class="level2">
+                        <li>Selection of satellite view, showing traffic info and current location button.</li>
+                        <li>Selection of the start action <i>Routen Request</i> or <i>Circular Search.</i>.</li>
+                        <li>With/Without immediate execution of the start action.</li>
+                    </ul>
+                </li>
+                <li>Stations: toggles between the views <i>Stations</i> and <i>Map</i>.</li>
+                <li>Import: opens a view for selecting a formerly saved station list for importing
+                    from external storage.
+                </li>
+                <li>Help: opens help information.</li>
+            </ul>
+
+            <h2>Handling of touch/click events</h2>
+            The route is shown as a red line together with green markers at start,stopovers and end point. Stations are presented as markers for higher            
+            zoom levels. The color of the marker indicates the maximum power of the charging points of this station: 
+            <br/>violet < 11 KW (L=1), blue < 22 KW (L2), yellow < 50 KW, brown >= 50 KW (L4).
+            <br/>For lower zoom levels stations are clustered; the cluster markers show the number of contained stations.
+
+            <p>Clicking a cluster marker zooms in and shows the station markers of this cluster.</p>
+            <p>Clicking a marker will open an info window with a short description of this marker. A short click on the map closes the info window.
+                <br/>Clicking the bar <i> Get Station Details</i> of an info window opens the details of this charging station.
+            </p>
+            <p>
+                Clicking an arrow button in the middle left and right of the screen steps to the
+                next marker, forwards by the the right button and backwards by the
+                left button. This affects route and station markers.
+            </p>
+
+            <h2>Using a navigation sytem</h2>
+            If a route marker or a station marker is selected, clicking the button with 
+            a blue right arrow at the bottom of the screen opens a
+            dialog asking the user, if he wants to navigate with the shown navi system 
+            from the current position to the selected marker. The address of the selected 
+            marker is shown, if an internet connection exists. Clicking the field with the 
+            navi system opens a list of navi systems, from which one may be selected.
+            Clicking <i>Yes</i> opens the selected navigation system, if it is installed on the android device.
+            <p> </p>
+            The following navigation systems may be used:
+            <ul class="level1">
+                <li>Google Maps</li>
+                <li>Sygic GPS</li>
+                <li>Navigon</li>
+                <li>WAZE GPS</li>
+                <li>HERE WeGo</li>
+                <li>OsmAnd</li>
+            </ul>
+            <p>
+                If the navigation system was finished, view <i>Map</i>  will be opened.
+                If the android device was running on low memory, Electro Station Finder may
+                be finished and will start from scratch.
+            </p>
+
+            <h1><a id="ViewSettings">View Settings</a></h1>
+            In <i>Settings</i> properties of the map and start actions can be specified.
+            <p class="subh">Map properties:</p>
+            <ul class="level1">
+                <li>Satellite view</li>
+                <li>Traffic volume</li>
+                <li>With button to show the actual location</li>
+            </ul>
+
+            <p class="subh">Start action:</p>
+
+            <ul class="level1">
+                <li>Start with requesting a route</li>
+                <li>Start with circular search</li>
+                <li>With execution the selected start action</li>
+            </ul>
+
+            <h1><a id="ViewStationsView">View Stations</a></h1>
+            With the view <i>Stations</i> charging stations can be searched along a route 
+            or around a location within a given radius.
+            The stations along a route may be restricted to the vicinity of refuelling stops, which are apart from the next stop
+            by the distance of the refuelling range. 
+            <p>The radius search can be done around a location given by the  location service of the phone or determined by an address enetered by the user.
+            </p>
+            <p>The result of searching for stations can be saved to a html file on external storage (e.g. sd card). This file can be imported by clicking 
+                the menu item <i>Import</i>. This can be used for navigating to a station of this file without having an internet connection.
+            </p>
+            The station view contains two subviews:
+            <ul class="level1">
+                <li>Search criteria for searching stations.
+                </li>
+                <li>Station list with the search results.
+                </li>
+            </ul>
+            Each sub view may be switched to the other sub view.
+            <p>Menu items: s. <a  href="#ViewMap">View Map</a></p>
+
+            <h2><a id="search_criteria">Search Criteria</a></h2>
+
+            <ul class="level1">
+                <li>Combobox <i>Connector:</i>
+                    <br/>
+                    Clicking the combo box opens a list of availabe connector types. Any number of connectors can be checked including none.
+                    Searching for charging stations results in those stations, which have at least one of the checked connectors with the required loading power.
+                    If no connector is checked, searching is independent on connectors and loading power.
+                </li>
+                <li>Combobox <i>Power:</i>
+                    <br/>Clicking the combo box opens a list of available minimal charging powers of charge points. Searching for stations results in those stations,
+                    which have a charge point with one of the selected connectors and its charging power greater or equal the selected value.
+                </li>
+                <li>Corridor: distance of the route in kms or miles for English (GB/US).</li>
+                <li>Combo box <i>Search Mode:</i>
+                    <br/>Clicking the combo box opens a list with possible search modes
+                    <ul class="level2">
+                        <li>Around Location: search around a location obtained by the 
+                            location service of the phone within a circle of the given radius.
+                            <br/>When the search mode <i>Around location</i> is selected and no location
+                            service was activated, it is asked, if the settings <i>Location access</i>
+                            should be opened or the last known location should be used.
+                        </li>
+                        <li>Around Address: search around a location given by the address entered 
+                            by the user within a circle of the given radius.
+                            <br/>When this mode is already selected, the address of the location can be modified 
+                            by long clicking the combo box.
+                            <br/>When the search mode <i>Around address</i> is selected and no
+                            network was activated, the settings of the phone are opened.
+                        </li>
+                        <li>Along Route: search along the route with a miximum distance <i>Corridor</i> 
+                            from the route.</li>
+                        <li>At charging Stops: as mode <i>Along Route</i> but restricted to the vicinity of charging stops. 
+                            At end of the route a circular search is done to charge for the way back.
+                        </li>
+                    </ul>
+                </li>
+                <li><a id="criteria_ranges">Ranges:</a>
+                    <ul class="level2"> 
+                        <li><i>Range after charging stops</i> in km or miles: range with achievable loading state at charging stations; 
+                            this is often lower than the battery capacity (for mode <i>Charging Stops</i> only).</li>
+                        <li><i>Start Range</i> in km or miles: range at start of a trip; this can be greater than the <i>Range after charging stops</i>.
+                            <br/>This takes into account, that a trip can be started with fully loaded batteries, which often cannot be fully reloaded at charging stops.
+                        </li>
+                    </ul>
+                </li>
+                <li>Button <i>Find stations</i>: starts searching.</li>
+                <li>Button <i>Station List</i>: switches to sub view <i>Station List</i>.</li>
+
+            </ul>
+            <p class="head"><a id="criteria_plus_version">Plus Version only:</a>
+            </p>
+            <ul class="level1">
+                <li>Free Charging: results in charging stations, which allow charging without costs.</li>
+                <li>Barrier Free Payment: results in charging stations, which can be used with normal payment methods as cash, EC-. credit- or  RFID-cards.
+                    <br/>Hint: The search criteria <i>Barrier Free Payment</i> and <i>Charge Cards</i> are linked by <i>Or</i>.
+                </li>
+                <li>Charge Cards: A multiple choice list with available charge cards is presented with a search field on top. The search field 
+                    can be filled with the prefix of charge card names. The list scrols down to this prefix.
+                    <br/>The selected charge cards are linked by <i>Or</i>.
+                    <br/>The accepted charge cards of a station can be seen in the details of a station.
+                </li>
+            </ul>
+
+            The station data required for the selected search mode will be loaded, after searching for stations was started, if they are not already loaded.
+            Only then the result of a former search will be overridden.
+            <br/>The states of all modifiable fields are saved after a search was completed successfully and restored
+            after Electro Station Finder was restarted.
+
+            <h2>Station List</h2>
+            The station list shows the stations with the following informations:
+            <ul class="level1">
+                <li> Name</li>
+                <li>Address</li>
+                <li>Connector Types with number of available charging points and power in KW</li>
+                <li>Distance from start of the route or from user's location and for searching 
+                    along the route the airline distance from the route.</li>
+                <li>Geographical latitude and longitude in degrees.</li>
+                <li>Hyperlink to the charging station</li>
+            </ul>
+            There are the following buttons or hyperlinks:
+            <ul class="level1">
+                <li>Button <i>Top</i>: 
+                    <br/>scrolls to the top of the station list.</li>
+                <li>Button <i>Save</i>:
+                    <br/>Saves the station list in a html file on the external
+                    storage (e.g. sd card).
+                </li>
+                <li>Button <i>Search Criteria</i>:
+                    <br/>switches to the sub view <i>Search Criteria</i>.</li>
+                <li>List of stations:
+                    <br/>Clicking the blue hyper link of a station selects the corresponding
+                    station marker on the map and opens an info window with the same informations of a station in the station list. 
+                    This becomes completely visible, after the view <i>Stations</i> was hidden.
+                    <br/>If a station was selected on the map, swichting to view <i>Stations</i>
+                    the view is scrolled to the details of this station.
+                </li>
+            </ul>
+            Clicking the info window opens the details of the charging station with the following informations:
+            <ul class="level1">
+                <li> Name</li>
+                <li>Address</li>
+                <li>Connector Types with number of available charging points and power in KW</li>
+                <li>Operator</li>
+                <li>Network</li>
+                <li>Verified</li>
+                <li>Opening times</li>
+                <li>Location</li>
+                <li>Barrierfree</li>
+                <li>Costs with description and information of free parking and charging</li>
+                <li>Status: if not ok description of the fault</li>
+            </ul>
+
+
+            <h1><a id="ViewImport">View Import</a></h1>
+            In view <i>Import</i> the html file with a station list can be selected to be imported.
+            <br/>With <i>Open</i> the selected file is shown. Clicking the blue link 
+            of a station opens the dialog for selecting the navigation system to be used
+            to navigate to this station.
+            <p>This can be used advantageously, if no internet connection is available or 
+                roaming fees should be avoided. A station list is prepared in a 
+                Wlan environment and stored at external storage. While traveling this list is 
+                imported to navigate to a selected station.
+            </p>
+            Menu items:
+            <ul class="level1">
+                <li><i>Get file:</i> opens the dialog for selecting a station list.
+                </li>
+                <li><i>Top:</i> scrolls to the top of the list.
+                </li>
+            </ul>
+
+            <h1><a id="Other_Apps">Other Apps of the author</a></h1>
+            Android App for finding Natural Gas (Cng) or Liqufied Petrol Gas (Lpg) refueling stations.
+            <p>
+                Free version: <a href="https://play.google.com/store/apps/details?id=cnglpg.finder.plus">
+                    <b>Cng/Lpg Finder Plus</b></a>
+            </p>
+            <p>
+                Paid version: <a href= "https://play.google.com/store/apps/details?id=cnglpg.finder">
+                    <b>Cng/Lpg Finder</b></a>
+            </p>
+
+            Android App searching for Electric Loading Stations:
+            <p>
+                Paid Version Version: <a href="https://play.google.com/store/apps/details?id=evse.finder.plus">
+                    <b>EV Station Finder Plus USA</b></a>
+            </p>
+            <p>
+                Free Version: <a href= "https://play.google.com/store/apps/details?id=evse.finder">
+                    <b>EV Station Finder USA</b></a>
+            </p>
+
+            <h1><a id="ChangeLog">Change Log</a></h1>
+
+            <h2>Electro Station Finder Free Version V3.2.5</h2>
+            Published: 27.01.2024
+            <ul class="level1">
+                <li>Bugfix: When starting without an internet connection the app freezes or is closed.</li>
+                <li>New: Updated charge cards.</li>
+            </ul>
+
+            <h2>Version V3.2.3</h2>
+            Veröffentlicht: 26.01.2024
+            <ul class="level1">
+                <li>New: Adaption to required Google Policies.</li>
+                <li>New: Updated charge cards.</li>
+            </ul>
+
+            <h2>Version V3.1.2</h2>
+            Published: 13.10.2023
+            <ul class="level1">
+                <li>New: Updates charge cards.</li>
+                <li>Bugfix: Forced close after repeatedly searching for stations. 
+                </li>
+                <li>Bugfix: Some short messages were truncated on some devices.</li>
+            </ul>
+            <h2>Version V3.1.0</h2>
+            Published free version: 18.08.2023
+            Published Plus version: 24.08.2023
+            <ul class="level1">
+                <li>New free version: Advertisement is shown at start of the app.
+                    The Plus version is without advertisement; details of a station contain costs of charge cards.</li>
+                <li>New: Updates charge cards.</li>
+                <li>Bugfix: Corrections of Google policy violations.</li>
+                <li>Bugfix: Forced close, when an alert dialog should be shown
+                    and the calling component is not visible.
+                </li>
+                <li>Bugfix: Forced close after an input was 
+                    terminated by the Enter Key of a key board. </li>
+            </ul>
+
+            <h2>Version V3.0.3</h2>
+            Published: 29.06.2023
+            <ul class="level1">
+                <li>New: Input fields in <i>Waypoints</i> and <i>Location Address</i> may have multi lines instead of single line.</li>
+                <li>New:Window width of dialogs, stations and route drawers and info window of markers  
+                    are adjusted due to the screen width of the device and the width of portrait / landscape mode.</li>
+                <li>New: Adaption to Android 14</li>
+                <li>New: Updates charge cards.</li>
+                <li>Bugfix Android 13: The back button finishes the app instead of first closing open windows
+                    as info window or open left or right drawer.
+                </li>
+            </ul>
+
+            <h2>Version V2.9.6</h2>
+            Published: 10.02.2023
+            <ul class="level1">
+                <li>New: When in the waypoints dialog a selected station should be added to the list of waypoints, 
+                    the address of the waypoint is inserted in the list instead of the geographical coordinates.</li>
+                <li>New: Updates charge cards.</li>
+                <li>Bugfix: Clicking the title of a station in the list of found stations did not always open the info window of the station on the map.</li>
+            </ul>
+
+            <h2>Version V2.8.4</h2>
+            Published: 01.09.2022
+            <ul class="level1">
+                <li>New: Adaptions to Android 13.0</li>
+                <li>New: Chargecards were updated</li>
+                <li>New Plus version: Chargecard costs were updated</li>
+                <li>Bugfix: Android Version >= 6.0: When starting the app and the permission access location was requested, then the start action
+                    <i>Circular search</i> was not executed.</li>
+            </ul>
+
+            <h2>Version V2.7.9</h2>
+            Published free version: 10.02.2022; Plus Version: 09.06.2022
+
+            <ul class="level1">
+                <li>New Plus Version: The costs of charge cards were added to the charge card list of station details.</li>
+                <li>New: Station details can be called additionally in the station list.</li>
+                <li>New: Chargecards were updated</li>
+                <li>Bugfix: When the address of a station contains an apostroph, clicking on the title of a 
+                    station in the station list did not open the info window on the map.</li>
+                <li>Bugfix: When the Developer Options <i>Don't keep activities</i> was checked, 
+                    the link <i>Station Web Site</i> of Station Details was opened by the first click  but not by following clicks.</li>
+            </ul>
+            <h2>Version V2.7.2</h2>
+            Published: 08.11.2021
+            <ul class="level1">
+                <li>New: The header of the station list now contains additionally start and end address of the route, 
+                    if searching was route based, or the address, if searching was around an address
+                    or the coordinates of the current location, if the searching was around location.</li>
+                <li>New: Adaption to Android V12.0</li>
+                <li>New: Chargecards were updated</li>
+            </ul>
+
+            <h2>Version V2.6.6</h2>
+            Published: 16.05.2021
+            <ul class="level1">
+                <li>New: The station list is stored in the shared storage instead in the app specific storage. So other apps as file managers can
+                    access this list</li>
+                <li>New: All search criteria were added to the overview of the station list.</li>
+                <li>New: The position of a station (right/left) to the route is added to the display data.</li>
+                <li>New: Chargecards were updated</li>
+                <li>Bugfix: the númber of found stations in the headline of the station list was incorrect.</li>
+                <li>Bugfix Android version 11: the navi systems Sygic, OsmAnd and HERE WeGo could not be started.</li>
+            </ul>
+
+            <h2>Version V2.6.3</h2>
+            Published: 02.12.2020
+            <ul class="level1">
+                <li>New: Adoptions to Android 11.0</li>
+                <li>New: All Dialogs as for waypoints or settings will be restored after restarted from background.</li>
+                <li>New: Chargecards were updated.</li>
+                <li>Bugfix: If for saving station details many files were shown, then the input field and buttons are not visible. </li>
+                <li>Bugfix: when the soft keyboard was opened for an input field, the keyboard was closed after the App was switched to the background and restarted.</li>
+            </ul>
+
+            <h2>Version V2.5.2</h2>
+            Published: 29.05.2020
+            <ul class="level1">
+                <li>Missing charge cards werde added.</li>
+                <li>Bugfix: When an input field has focus and the continue button of the view was clicked instead 
+                    of the Done button of the soft keyboard, the soft keyboard was not closed.</li>
+                <li>Bugfix: When the <i>Open</i> Button for <i>Import </i> Charging Stations was enabled by selecting a file, then after 
+                    rotating the device the <i>Open</i>-Button is disabled.</li>
+            </ul>
+            <h2>Plus Version V2.4.3 and Free Version 2.4.6</h2>
+            Published: 09.03.2020
+            <ul class="level1">
+                <li>New: In station details the list of charge cards of a station is sorted alphabetically.</li>
+                <li>New Plus-Version: When the list of charge cards is opened, it is scrolled to the first selected charge card.</li>
+                <li>New: If the location service is not enabled, the user is asked to enable this service.</li>
+                <li>Missing charge cards were added.</li>
+            </ul>
+
+            <h2>Version V2.3.8</h2>
+            Published: 20.11.2019
+            <ul class="level1">
+                <li>Missing charge cards were added.</li>
+                <li>Bugfix: Upper and lower bounds of corridor/radius, range and remaining range were defined for English (GB and US) in KM and not in miles.</li>
+                <li>Bugfix: Forced close, after the details of a station was requested and the actual window was closed.</li>
+                <li>Bugfix: For small screen width the field <i>Corridor/Radius</i> is not or only  partially visible.</li>
+            </ul>
+
+            <h2>Version V2.3.1</h2>
+            Published: 31.07.2019
+            <ul class="level1">
+                <li>New: Informs user, if an update is available (for android version 5.0 and above).</li>
+                <li>New: Adaptions to Android V9.+</li>
+                <li>New: Missing charge cards were added.</li>
+            </ul>
+
+            <h2>Version V2.2.6</h2>
+            Published: 06.06.2019
+            <ul class="level1">
+                <li>Note: Because an Api key for requesting a route is misused by others, this key was replaced.
+                    The old key will soon be deleted. Then old versions can no longer request a route.</li>
+                <li>New charge cards were added.</li>
+            </ul>
+
+            <h2>Version V2.2.5</h2>
+            Published: 16.05.2019
+            <ul class="level1">
+                <li>Change: When the search mode 'Around Address' is selected, clicking on it will open the dialog for setting the address.</li>
+                <li>New: With map scale bar dependent on zoom level and latitude.</li>
+                <li>New: Improvements of the user interface.</li>
+                <li>New: A long click on a blue arrow and map scale in the map view shows a hint regarding the clicked element.</li>
+                <li>New: Missing charge cards were added.</li>
+                <li>Adjustment of connector names.</li>
+                <li>Bugfix: On some devices the address search for the search mode <i>Around Address</i> was canceled.</li>
+                <li>Bugfix: When the language on the device was set to English-UK or Emglish-US, distances are given in Km instead of miles.</li>
+                <li>Bugfix: If charge cards are not required for a station, requesting station details was canceled with an error.</li>
+            </ul>
+            Plus version:
+            <ul class="level1">
+                <li>Change: When the search mode 'Around Address' is selected, clicking on it will open the dialog for setting the address.
+                <li>New: Missing charge cards were added.</li>
+                <li>Bugfix: On some devices the address search for the search mode <i>Around Address</i> was canceled.</li>
+                <li>Bugfix: When the language on the device was set to English-UK or English-US, distances are given in Km instead of miles.</li>
+            </ul>
+
+            <h2>Version V2.2.1</h2>
+            Plus version published: 13.03.2019
+            <ul class="level1">
+                <li>New: With map scale bar dependent on zoom level and latitude.</li>
+                <li>New: Improvements of the user interface.</li>
+                <li>New: A long click on a blue arrow and map scale in the map view shows a hint regarding the clicked element.</li>
+                <li>New: Missing charge cards and connectors were added.</li>
+                <li>Bugfix: If charge cards are not required for a station, station details are canceled with an error.</li>
+            </ul>
+
+            <h2>Version V2.1.0</h2>
+            <ul class="level1">
+                <li>Bugfix: Forced close, when importing a station list was paused by the home button and restarted and the developer option
+                    <i> Don&#39;t keep activities</i> was set.
+                </li>
+                <li>Bugfix: occasionally no connection to the data server was possible, while an internet connection exists
+                    (on devices with Android version &lt;6.0).
+                </li>
+                <li>Bugfix: Missing charge cards were added.</li>
+                <li>Bugfix (Plus version): When charge cards were selected with a space character in its name (as 'AESE Card')
+                    or if more than 2 cards were selected, then the search was canceled with the the message <i>... no internet connection ...</i>.
+                </li>
+                <li>Bugfix (Plus version): When the search criterium <i>Connectors</i> was changed, then the changed connectors were not applied
+                    searching for loading stations. However they were applied after restarting the app.
+                </li>
+            </ul>
+
+            <h2>Version V2.0.0</h2>
+            <ul class="level1">
+                <li>New paid version Electro Station Finder Plus with: Additional search criteria <i>Free Charging</i>, <i>Barrier Free Payment system</i>
+                    and <i>Charge Cards</i>.</li>
+                <li>New: The accepted charge cards are shown in the details of a station.</li>
+                <li>New: OsmAnd navi is supported.</li>
+                <li>Bugfix: If no connector and power >2 are selected, then the selected power has no effect.</li>
+                <li>Bugfix: Forced stop for devices with Android 4.3, when a station marker was selected.</li>
+                <li>Bugfix: On Devices with Android V9.0 the list of navigation systems is incompletely shown and is not scrollable.</li>
+            </ul>
+
+            <h2>Version V1.1.1</h2>
+            <ul class="level1">
+                <li>Bugfix in V1.1.0: forced stop, when the info window of a route step marker was clicked.</li>
+            </ul>
+
+            <h2>Version V1.1.0</h2> 
+            <ul class="level1">
+                <li>New: An open info window or open Route/Stations view is closed by the back key rather than finishing the app.
+                </li>
+                <li>New: Clicking the blue link of a route step in route details marks the position of this step and centers the map at its position.</li>
+                <li>Change: A station is now accepted, if it has one of the required connector types and this has a loading power >= the required power.</li>
+                <li>Change: The maximum of <i>Start Range</i> (former Remaining range) is now the same as for <i>Range after refueling stops</i> (former Range).
+                    <br/>So the <i>Start Range</i> can be greater than the <i>Range after refueling stops</i>.
+                <li>Change: The sector length, in which stations are searched around a refueling stop, is no longer constant, but increases with the range up to a limit of 60 km.</li>
+                <li>Change: Search mode <i>At refueling stops</i> adds a circular search at end of the route to charge for the way back.</li>
+                <li>Bugfix: Forced close, when Waypoints were opened and no station marker was selected.</li>
+                <li>Note: Upgrading from V1.0.3 or lower  resets the settings for the route and stations to the default values.</li>
+            </ul>
+
+            <h2>Version V1.0.4</h2>
+            <ul class="level1">
+                <li>New: Additional search criterion <i>Minimal charging power</i>.
+                <li>New: Waypoints can be added in arbitrary order to a list and removed from the list. If stations are already found, 
+                    a selected station can be added as waypoint.
+                </li>
+                <li>Change: For search mode <i>At Refueling Stops</i> minimal range is set to 30 km (18.641 mls) and the minimal remainig range to 10 km (6.214 mls)</li>
+                <li>Bugfix:Forced Stop, when the info window of a route marker was clicked.</li>
+                <li>Note: The installationof V1.0.4 resets the settings for the route and stations to the default values.</li>
+            </ul>
+
+            <h2>Version V1.0.3</h2>
+            <ul class="level1">
+                <li>New: With specific marker icon for defect stations.</li>
+                <li>New: Checkboxes instead of radio buttons in connector list.</li>
+                <li>New: Link to the station web site in station details.</li>
+                <li>Bugfix: Forced stop, when searching for stations was canceled by clicking the home button.</li>
+                <li>Bugfix: Forced stop, when the map was loaded too slowly.</li>
+
+            </ul>
+
+            <h2>Version V1.0.2</h2>
+            <ul class="level1">
+                <li>New: In <i>Settings</i> of the action bar the user can configure the start action, which is shown at start of the app. The start action can be
+                    the <i>Route Request</i> or the <i>Circular Search</i> of charging stations. The start action may be shown or executed immendiately applying
+                    the last used search criteria.
+                </li>
+                <li>New: After searching for charging stations the map is zoomed to span all found stations.</li>
+                <li>Bugfix:: Selected connector types were not saved in all situations. All search criteria are now saved after successfull searching for 
+                    charging stations.</li>
+                <li>Bugfix: Forced Stop, when the connector types were not saved.</li>
+                <li>Bugfix: Forced Stop, when the app was finished or moved to the background.</li>
+                <li>Bugfix: Forced Stop after the selected navi <i>HERE WeGo</i> was finished and when in <i>Developer Options</i> of the device <i>Don't keep Activities</i> was selected.</li>
+
+            </ul>
+            <h2>Version V1.0.1</h2>
+            <ul class="level1">
+                <li>Bugfix: For a route with several stop overs a wrong start address was stated in Route Details.</li>
+            </ul>
+
+            <h1><a id="Contact">Contact</a></h1>
+            Feedback is highly appreciated. You may email me to:
+            <p class="link_fontsize">
+                <a href="mailto:ostermann.bernd@googlemail.com"><b>ostermann.bernd@googlemail.com</b></a>
+            </p>
+
+            <h1><a id="Copyright">Copyright and Acknowledgement</a></h1>
+            <ul class="level1">
+                <li>Acknowledgement to the provider of the EVSE station data GoingElectric
+                    <p class="link_fontsize">
+                        <a href="https://www.goingelectric.de/">
+                            <b>https://www.goingelectric.de/</b> 
+                        </a>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
