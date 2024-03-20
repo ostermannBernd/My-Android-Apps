@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<!--
+ 
+-->
+
+<html lang="en">
+    <head>
+        <title>Show help files of all Android Apps</title>
+        <meta name="description" content="Show help files of all Android Apps"/>
+        <meta name="viewport" content="width=device-width, height=device-height initial-scale=1.0, user-scalable=yes"/>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+
+        <style>
+            body {
+                font-family: Arial,Helvetica,sans-serif;
+                background-color: black;
+                color:white;
+                font-size: 1.0em
+            }
+            A:link{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                color:#306EFF;
+            }
+            A:visited{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                color:#FF00A0;
+            }
+
+            A:hover{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                color:cyan;
+            }
+            A:active{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                color: red;
+            }
+
+            h1 {
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+            h2 {
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                font-weight: bold;
+                margin-left: 1.0em;
+            }
+            h3{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1em;
+                font-weight: bold;
+                margin-left: 1.5em;
+            }
+            p.head{
+                font-family: Arial,Helvetica,sans-serif;
+                text-align: left;
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+            p.subh{
+                font-weight: bold;
+                font-size: 0.9em;
+                margin-left: 1.5em;
+            }
+            .link_fontsize{
+                font-size: 1.1em;
+            }
+            DIV {
+                counter-reset: chapter;      /* Create a chapter counter scope */
+            }
+            H1:before {
+                content: counter(chapter) ". ";
+                counter-increment: chapter;  /* Add 1 to chapter */
+            }
+            H1 {
+                counter-reset: section;      /* Set section to 0 */
+            }
+            H2:before {
+                content: counter(chapter) "." counter(section) " ";
+                counter-increment: section;
+            }
+
+            ul.level1 {
+                margin-left: 1.5em;
+                padding-left: 0em;
+                list-style-type: square;
+            }
+            ul.level2 {
+                margin-left: 2.0em;
+                padding-left: 0em;
+                list-style-type: circle
+            }
+            ul.level3 {
+                margin-left: 2.5em;
+                padding-left: 0em;
+                list-style-type: disc
+            }
+            li{
+                margin-top: 0.5em
+            }
+            div.level2{
+                margin-left: 1.5em
+            }
+            div.level3{
+                margin-left: 2.0em
+            }
+
+            .border{
+                border-bottom: 2px solid #00a0ff;
+            }
+        </style>
+
+
+    </head>
+    <body>
+        <div>
+            <p class="head">  
+                Select the help file of the App you are interested in.
+            </p>
+
+            <h1>App BoPlanets:</h1>
+            <p><a href="./BoPlanets-help/BoPlanets-help-de.html">Hilfe zu BoPlanets</a></p>
+            <p><a href="./BoPlanets-help/BoPlanets-help-en.html">Help about BoPlanets</a></p>
+
+            <h1>App Cng Lpg Finder:</h1>
+            <p><a href="./Cng-Lpg-Finder-help/Cng-Lpg-Finder-help-de.html">Hilfe zu Cng/Lpg Finder</a></p>
+            <p><a href="./Cng-Lpg-Finder-help/Cng-Lpg-Finder-help-en.html">Help about Cng/Lpg Finder</a></p>
+
+            <h1>App Electro Station Finder:</h1>
+            <p><a href="./Electro-Station-Finder-help/Electro-Station-Finder-help-de.html">Hilfe zu Electro Station Finder</a></p>
+            <p><a href="./Electro-Station-Finder-help/Electro-Station-Finder-help-en.html">Help about Electro Station Finder</a></p>
+
+            <h1>EV Station Finder:</h1>
+            <p><a href="./EV-Station-Finder-help/EV-Station-Finder-help-de.html">Hilfe zu EV Station Finder</a></p>
+            <p><a href="./EV-Station-Finder-help/EV-Station-Finder-help-en.html">Help about EV Station Finder</a></p>
+        </div>
+    </body>
+</html>
+
