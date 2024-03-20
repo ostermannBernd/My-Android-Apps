@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1, minimum-scale=1, user-scalable=yes"/>
+        <title>Help BoPlanets</title>
+
+        <style>
+            body {
+                font-family: Arial,Helvetica,sans-serif;
+                background-color: black;
+                color:white;
+                font-size: 1.0em;
+                counter-reset: chapter;
+            }
+            A:link{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                color:#306EFF;
+            }
+            A:visited{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                color:#FF00A0;
+            }
+
+            A:hover{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                color:cyan;
+            }
+            A:active{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                color: red;
+            }
+
+            h1 {
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+            h2 {
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                font-weight: bold;
+                margin-left: 1.0em;
+            }
+            h3{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1em;
+                font-weight: bold;
+                margin-left: 1.5em;
+            }
+            p.head{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                font-weight: bold;
+            }
+            p.subh{
+                font-weight: bold;
+                font-size: 0.9em;
+                margin-left: 1.5em;
+            }
+            .link_fontsize{
+                font-size: 1.1em;
+            }
+            DIV {
+                counter-reset: chapter;      /* Create a chapter counter scope */
+            }
+
+            H1:before {
+                content: counter(chapter) ". ";
+                counter-increment: chapter;  /* Add 1 to chapter */
+                counter-reset: section;      /* Set section to 0 */
+            }
+            H1 {
+                counter-reset: section;      /* Set section to 0 */
+            }
+            H2:before {
+                content: counter(chapter) "." counter(section) " ";
+                counter-increment: section;
+            }
+            DIV {
+                counter-reset: chapter;      /* Create a chapter counter scope */
+            }
+            ul.level1 {
+                margin-left: 1.5em;
+                padding-left: 0em;
+                list-style-type: square;
+            }
+            ul.level2 {
+                margin-left: 2.0em;
+                padding-left: 0em;
+                list-style-type: circle
+            }
+            ul.level3 {
+                margin-left: 2.5em;
+                padding-left: 0em;
+                list-style-type: disc
+            }
+            li{
+                margin-top: 0.5em
+            }
+            div.level2{
+                margin-left: 1.5em
+            }
+            div.level3{
+                margin-left: 2.0em
+            }
+        </style>
+
+    </head>
+    <body>
+        <p class="head"> Version</p>
+        <ul class="level1">
+            <li>Free version BoPlanets: V2.4.0</li>
+            <li>Paid version BoPlanets-Plus: V2.4.0</li>
+            <li>Required Android version: V4.3 or higher</li>
+            <li>Developed with: Android V14.0</li>
+        </ul>
+        <p class="head">Update from Google Play</p>
+        
+        <div style="position: relative; float:left; margin-left: 1.0em;width: 5.3em; height: 5.3em;">
+            <img src="ic_launcher_playstore.png" alt="market icon"/>
+        </div>
+        <div class="link_fontsize" style="position: relative; float:left; width:auto; height: 5.3em;">
+            <a href="https://play.google.com/store/apps/details?id=electro.station.finder">
+                <b>BoPlanets Plus</b></a>
+            <p>
+                <a href="https://play.google.com/store/apps/details?id=electro.station.finder.plus">
+                    <b>BoPlanets</b></a>
+            </p>
+        </div>
+        
+        <hr style="clear: both"/>
+        <div>
+            <p class="head">Content</p>
+            <a href="#Overview_of_BoPlanets"><h1>Overview</h1></a>
+            <a href="#Starting_BoPlanets"><h1>Starting BoPlanets</h1></a>
+            <a href="#View_Planets"><h1>View Planets</h1></a>
+            <a href="#View_Settings"><h1>View Settings</h1></a>
+            <a href="#Menu_Views"><h1>Menu Views</h1></a>
+            <a href="#Menu_Movement"><h1>Menu Movement</h1></a>
+            <a href="#Menu_Rise_Transit_Set"><h1>Menu Rise&amp;Transit&amp;Set</h1></a>
+            <a href="#Draw_Panel"><h1>Draw Panel</h1></a>
+            <a href="#Orbital_Elements"><h1>Orbital elements</h1></a>
+            <a href="#Glossary_of_Terms"><h1>Glossary of Terms</h1></a>
+            <a href="#changelog"><h1>Change log</h1></a>
+            <a href="#contact"><h1>Contact</h1></a>
+        </div>
+        <hr style="clear: both"/>
+        <div>
+            <h1><a name="Overview_of_BoPlanets">Overview of BoPlanets</a></h1>
+            BoPlanets is a virtual planetarium, which shows the
+            positions of the planets in the solar system relative to an observing planet,
+            which can be selected out of the planets and the sun. The planets can be shown
+            in various views. In the ecliptic view the Cartesian coordinates, in the
+            equatorial view right ascension and declination, in the horizontal view azimuth
+            and altitude of the planets relative to an observing planet are displayed. In
+            the horizontal view the position of the observer on the observing planet can be
+            the current location of the phone (the location of the phone on the planet is the 
+            same as on earth)or can be determined by an address (analogical to the earth as 
+            observing planet).
+
+            <P>A list of rise, transit and set times of a planet,
+                as seen by an observer on the observing planet, may be generated.</P>
+            <P>You may have a look to the epicycles of the planets, observed from the 
+                earth or any other planet.</P>
+            <P>You can let the planets moving by single steps or let them
+                run continuously. The speed may be varied by a speed slider. </P>
+            <br/>
+            There is the paid version BoPlanets-Plus with full functionality and the
+            free version BoPlanets with restricted functionality.
+            <br/>The following functions are available in the Plus-Version only:
+            <ul class="level1">
+                <li>
+                    Views Horizon at loation and at address.
+                </li>
+                <li>
+                    Determining times of rise, transits and set of a planet.
+                </li>
+            </ul>
+
+            <h1><a name="Starting_BoPlanets">Starting BoPlanets</a></h1>
+            BoPlanets is started with the View <i>Planets</i> and the drawer view <i>Settings</i>. The view <i>Planets</i>
+            contains the action bar at the top of the screen with the navigation button and the menus <i>Views</i>, <i>Movement</i>, 
+            <i>Rise&amp;Set</i> and <i>Help</i>.
+            <p>
+                The navigation button toggles between the views <i>Planets</i> and <i>Settings</i>. The view <i>Settings</i> can be made visible by
+                swiping from the left hand side of the screen and invisible by swping to the left hand side.
+            </p>
+
+            <h1><a name="View_Planets">View Planets</a></h1>
+            The Planets View consists of the following elements:
+            <ul class="level1">
+                <li>the drawing panel with the movements of the planets.</li>
+                <li>An input field with the step size in earth days.</li>
+                <li> A slider to vary the speed of the planets.</li>
+                <li>Date and time of the state of the planets corresponding to the timezone and locale of the phone.</li>
+            </ul>
+
+            <h1><a name="View_Settings">View Settings</a></h1>
+            The drawer view <I>Settings</I> has the following fields:
+            <ul class='level1'>
+                <li>Start Date: date and time at which movements of the planets start, corresponding to the time zone of the device or of the address of a location.</li>
+                <li>Select Observer: for selecting the observing planet.</li>
+                <li>Select Planets: for selecting planets to be observed by the observing planet.</li>
+                <li>Button Ready: closes the view and applies the settings for the configuration of the planets.</li>
+            </ul>
+
+
+            <h1><a name="Menu_Views">Menu Views</a></h1>
+            The menu Views contains the following items:
+            <UL class="level1">
+                <LI>Ecliptic: 
+                    <br/>shows the planets in the ecliptic plane at their Cartesian
+                    coordinates.</LI>
+
+                <LI>Log. Ecliptic:
+                    <br/>like Ecliptic coordinates, but
+                    with logarithmic scaling of the radius vector.</LI>
+
+                <LI>Equatorial: 
+                    <br/>shows the planets relativ to the equator of the 
+                    observer with right ascension and declination of the planet
+                    above the equatorial plane</LI>
+
+                <LI>Horizon at location/address (Plus version only): 
+                    <br/>shows the planets relative to the horizon
+                    on the observing planet. The location of an observer
+                    is at the current location of the phone (so as if the observer's phone
+                    is on the same position as on earth) or at an location address.
+                    <br/>Date and time are shown according to the time zone of the device,
+                    if the location is given by the current location of the device, according to the
+                    time zone of the address, if the location is given by address.
+                    <br/>When selected, settings of <i>Location access</i> are opened,
+                    if no location access was activated.
+                </LI>
+            </UL>
+
+            <h1><a name="Menu_Movement">Menu Movement</a></h1>
+            The menu Settings consists of items, which controls the movement of the planets.
+            <ul class="level1">
+                <li><i>Time forward</i>the time is running forwards.</li>
+                <li><i>Time backward</i> the time is running backwards.</li>
+                <li><i>Run stepwise</i>:if selected and after the Draw Panel
+                    was clicked, the planets move one step.
+                <li><i>Run continuously</i>: if selected the planets are moving
+                    continuously till option <i>Run stepwise</i> is selected.
+                    <br/>(s. <a href="#Draw_Panel">Draw Panel</a>)
+                </li>
+            </ul>
+
+            <h1><a name="Menu_Rise_Transit_Set">Menu Rise&amp;Transit&amp;Set</a></h1>
+            (Plus version only)
+            <p>Clicking this menu opens a panel, by
+                which the times of rise, upper transit and set of a selectable planet are
+                determined as seen from a location on the observing planet.</p>
+            <p>
+                Elements of the panel:</p>
+            <ul class="level1">
+                <li><i>observer:</i> name of the observing planet</li>
+                <li><i>My location:</i> the location is given by the current location 
+                    of the phone on earth. This determines the location on the observing planet.
+                    <br/>When <i>My location:</i> is selected, settings of <i>Location access</i>
+                    is opened, if no location access was activated.
+                </li>
+                <li><i>By address</i>: the location is given by an address on earth.This determines 
+                    the loation on the observing planet.
+                </li>
+                <li><i>Latitude/Long.:</i>latitude and longitude of the observer in degrees.</li>
+                <li><i>Select planet:</i> select the planet, for which rise, transit and set times are
+                    to be determined.</li>
+                <li><i>Select Rise&amp;Set altitude:</i>Select the altitude relative to horizon, which defines Rise 
+                    and Set of the planet.
+                    <ul class="level2">
+                        <li>
+                            center of the planet is at horizon at 0 degrees.
+                        </li>
+                        <li>
+                            <i>-0.56° atmosph. light refraction: </i>
+                            <br/>center of the planet is 0.56 
+                            degrees below horizon. Due to refraction of light in the atmosphere the 
+                            planet becomes visible; meaningfull only for the earth as observer.
+                        </li>
+                        <li><i>-0.83° sun up. limb at horizon</i>:
+                            <br/>upper limb of the sun touches horizon.
+                            The center of the sun is 0.83 degrees below horizon. Due to light refraction and apparent diameter
+                            of the sun the sun becomes just visible. Meaningfull only for the earth as 
+                            observer and the sun as observed planet.
+                        </li>
+                        <li><i>-6° civilian twilight:</i>
+                            <br/>center of the planet is  6 degrees
+                            below horizon. Begin of civilian twilight. 
+                        </li>
+
+                        <li><i>-12° nautical twilight:</i>
+                            <br/>center of the planet is  12 degrees
+                            below horizon. Begin of nautical twilight. 
+
+                        </li>
+                        <li><i>-18° astronomical twilight:</i>
+                            <br/>center of the planet is  18 degrees
+                            below horizon. Begin of astronomical twilight. 
+                        </li>
+                    </ul>
+                </li>
+                <li><i>Start date: </i>date and time, from which on the first transit is looked for.</li>
+                <li>No of transits: the number of consecutive transits to be determined</li> 
+                <li>Buttons:
+                    <ul class="level2">
+                        <li><i>Close: </i>closes the panel.</li>  
+                        <li><i>Results: </i>shows the panel with the results.</li> 
+                        <li><i>Start: </i>starts determing rise, transit and set times.
+                            The results are shown in the extra Results panel.
+                        </li> 
+                        <li><i>Show Saved Data</i>: opens a dialog for selecting a file containg previously saved rise/set data and shows the selected file.</li>
+                    </ul>
+                </li>
+            </ul>
+            Rise and set occur, when the centre of the planet
+            reaches the altitude of the rise/set defining altitude relatively to the
+            horizon of the observer's location. This definition is applied for all objects of the
+            solar system including the sun. 
+            <p>
+                Applying the twilight and atmospheric refration definitions is meaningful only for the
+                earth as observing planet. 
+            </p>
+            <br/>
+            The results are shown in the Result panel. This panel contains the 
+            following buttons:
+            <ul class="level1">
+                <li><i>Top: </i> scrolls to the top of the results.</li>
+                <li><i>Parameters: </i>returns to the panel with the input parameters.</li> 
+                <li><i>Save: </i> saves the results to a html file on external storage.</li>
+            </ul>
+            If the location of the observer is given by the current location of the
+            phone, date and time of rise, tansit and set are displayed according to
+            the time zone of the phone. If the location is given by an address, date and
+            time are shown according to the time zone of the address.
+
+            <h1><a name="Draw_Panel">Draw Panel</a></h1>
+            This panel shows the positions of the planets in different coordinate systems. 
+            If <i>Run stepwise </i>is selected, clicking/touching  this panel moves 
+            the planets one step. A long click/touch clears the screen.
+            <br/>The coordinate axis are labeled with the dimension of the axis:
+            <ul class="level1">
+                <li>Ecliptic and logarithmic ecliptic system: 
+                    <br/>X and Y-axis with label AU: astronomical unit= 149.598 Mio km
+                </li>
+                <li>Equatorial system:
+                    <br/>label of X-axis: RA=Right ascension in degrees
+                    <br/>label of Y-axis: DEC= declination relative to the fixed 
+                    equatorial plane of the observer planet in degrees.
+                </li>
+                <li>Horizon system:
+                    <br/>label of X-axis: AZI= azimuth in degrees; azimuth of south is 0 degrees.
+                    <br/>label of Y-axis: ALT = altitude relativ to horizon of the observer in degrees.
+                </li>
+            </ul>
+
+            <h1><a name="Orbital_Elements">Orbital elements</a></h1>
+            The orbital elements (also known as osculating or Kepler elements)
+            define the orbit of a planet relative to the ecliptic.
+            <p>The elements of the picture below:
+            <ul class="level1">
+                <li><B>vernal equinox of the earth:</B>
+                    <br/>
+                    Intersection of earth's equtorial plane with the apparent orbital plane
+                    of the sun in asending direction. The line sun to vernal eqinox is 
+                    the X-axis of the reference ecliptic.
+                <li><B>a:</B> big half axis of the planet's ellipse</li>
+                <li><B>e:</B> numerical eccentricity:
+                    <br/>distance of the sun from the center of the ellipse= a*e</li>
+                <li><B>Line of node:</B>
+                    <br/>intersection of the orbital plane with the ecliptic. 
+                    Ascending node is the point, where the planet crosses the elliptic in
+                    asending direction.
+                </li>
+                <li><b>&#911;: </b>longitude of ascending node:
+                    <br/>angle from vernal equinox to ths ascending node measured in the 
+                    ecliptic plane.
+                </li>
+                <li><b>&#969;:</b> argument of perihelion:
+                    <br/>angle from ascending node to perihel measured in the orbital plane.
+                </li>
+                <li><b>&#969;ve: </b> planet's vernal equinox:
+                    <br/>Intersecting line of plante's equatorial plane with its orbital plane.
+                </li>
+                <li><b>&#957;: </b>&nbsp;true anomaly
+                    <br/>True anomaly is the angular distance from perihelion to the 
+                    position of the planet on its ellipse.
+                </li>
+                <li><b>E:</b> eccentric anomaly:
+                    <br/>the eccentric anomaly of a point P on the ellipse is the 
+                    angle E at the center of the ellipse and a point Q, which is 
+                    determined by drawing a vertical line from the major axis of the 
+                    ellipse through the point P on the ellipse and locating its 
+                    intercept Q with an auxiliary circle; a circle of radius a 
+                    (the semi-major axis of the ellipse) that enscribes the entire ellipse.
+                    The radius of the auxiliary circle passing through the corresponding 
+                    point Q makes an angle E with the major axis.
+                </li>
+            </ul>
+
+            <img src="orb_elem0.gif" alt="orbital elements" width="603" height="362">
+
+            <h1><a name="Glossary_of_Terms">Glossary of Terms</a></h1>
+            <UL class="level1">
+                <LI>Altitude:
+                    <br/>the angle of a planet relative to the horizontal plane 
+                    of an observer.</LI>
+
+                <LI>Ascending node:
+                    <br/>position, where a planet crosses the ecliptic
+                    in ascending direction (north).</LI>
+
+                <LI>Astronomical unit AU:
+                    <br/>mean distance earth-sun, 149.598 Mio km.</LI>
+
+                <LI>Azimuth:
+                    <br/>the angle of the projection of the radius vetor of a planet
+                    on the observer’s horizontal plane, measured vs. south 
+                    (east: negative; west: positive, south: 0 degree).</LI>
+
+                <LI>Date&amp;Time:
+                    <br/>the date and time due to the time zone of the telephone.
+                </LI>
+
+                <LI>Declination:
+                    <br/>the angle of a planet relative the equatorial plane
+                    of the observing planet.</LI>
+
+                <LI>Descending node:
+                    <br/>position, where a planet crosses the ecliptic
+                    in descending direction (south)</LI>
+
+                <LI>Ecliptic:
+                    <br/>the reference plane of the solar system.
+                    The x-axis is given by the line sun to vernal equinox 
+                    of the earth.
+                </LI>
+
+                <LI>Equatorial plane:
+                    <br/>the plane parallel to the equator of a planet</LI>
+
+                <LI>Greenwich meridian:
+                    <br/>the meridian with geographical longitude 0 degrees.
+                    <br/>As convention for other planets than earth this meridian is defined as that
+                    one, for which the sun passes its lowest altitude at 2001-Jan-1, 0:0hr.
+                    <br/>For the sun as observer the Greenwih meridian is defined as that one,
+                    which was parallel to the line of vernal eqinox at
+                    at 2001-Jan-1, 0:0hr.
+                </LI>
+                <LI>Greenwich Mean Sidereal Time (GMST):
+                    <br/>the angle of the Greenwich meridian vs. the planet's vernal equinox in degrees.
+                </LI>
+
+                <LI>Horizontal plane:
+                    <br/>tangential plane at the observation point on a planet.</LI>
+
+                <LI>Latitude:
+                    <br/>angular position on a planet measured vs. equator (north: positive, south: negative)</LI>
+
+                <LI>Local Mean Sidereal Time (LMST):
+                    <br/>the angle of the local meridian vs. the planet's vernal equinox. 
+                    <br/>LMST=GMST + longitude of the meridian. </LI>
+
+                <LI>Location on an observer planet:
+                    <br/>is defined by geographical latitue and longitude of the
+                    current location of the phone or an address on earth.
+                </li>
+
+                <LI>Longitude:
+                    <br/>angular position on a planet vs. the Greenwich Meridian (east: positive, west: negative)
+                </LI>
+
+                <LI>Obliquity:
+                    <br/>inclination of planet's rotation axis vs. the orbital plane.
+                </LI>
+
+                <LI>Orbit:
+                    <br/>movement of the planet in it's plane</LI>
+
+                <LI>Orbital (Keplerian) elements of a planet:
+                    <br/>(s. <a href="#Orbital_Elements">Orbital Elements</a>)
+                </LI>
+
+                <LI>Orbital period:
+                    <br/>time of one revolution around the sun.</LI>
+
+                <LI>Perihelion:
+                    <br/>the position of the planet on its orbit with minimum distance to the sun</LI>
+
+                <LI>Right ascension:
+                    <br/>angle of the position of a planet vs. the vernal equinox
+                    in the fixed equatorial system of the observing planet.
+                </LI>
+
+                <LI>Rise of a planet:
+                    <br/>coming from below horizon the centre
+                    of the planet reaches the rise defining altitude relatively to the horizontal
+                    plane of an observer on the observing planet. </LI>
+                <LI>Rise/Set defining altitude:
+                    <br/>(s. <a href="#Menu_Rise_Transit_Set">Menu Rise&amp;Transit&amp;Set</a>)
+                </LI>
+
+                <LI>Set of a planet:
+                    <br/>coming from above horizon the center
+                    of the planet reaches the set defining altitude relatively to the horizontal
+                    plane of an observer on the observing planet. This is valid for the sun
+                    also.</LI>
+
+                <LI>Sidereal day:
+                    <br/>time to rotate 360 degrees around the axis of rotation (earth: 0.9972 *24 h)</LI>
+
+                <LI>Sun day:
+                    <br/>time to rotate once to the same position of the sun (earth: 24 h)</LI>
+            </UL>
+
+            <h1><a name="changelog">Change log</a></h1>
+            <h2>Version 2.4.0</h2>
+            Published: xx.xx.2024
+            <ul class=level2>
+                <li>New: Adaption to required Google Policies.</li>
+            </ul>
+
+            <h2>Version 2.3.5</h2>
+            Published: 24.08.2023
+            <ul class=level2>
+                <li>New: Adaption to Android 14.0.</li>
+                <li>Bugfix: Corrections of Google policy violations.</li>
+            </ul>
+
+            <h2>Version 2.3.4</h2>
+            Published: 27.12.2021
+            <ul class=level2>
+                <li>New: Adaptions to Android V12.0</li>
+                <li>New Plus version: The results of Rise/Set are stored in the shared storage 
+                    instead in the app specific storage. So other apps as file managers or browsers can
+                    access these results.</li>
+                <li>Smaller corrections in drawing the planets.</li>
+            </ul>
+
+            <h2>Plus Version 2.3.1, Free Version 2.3.2</h2>
+            Published: 10.01.2021
+
+            <ul class=level2>
+                <li>New: Adaptions to Android V11.0</li>
+                <li>New: The start date may be entered with or without the time.</li>
+                <li>New Plus Version: Shows Rise/Set Data, which were saved to a file.
+                    <br/>In Android V11.0 file managers can no longer access app specific data. Using this new function 
+                    saved rise/set data can be shown.
+                </li>
+                <li>Bugfix: entering start date and time was not possible.</li>
+                <li>Bugfix Plus Version: selecting a locationby  address always returned an error.</li>
+            </ul>
+
+
+            <h2>Plus Version 2.2.6, Free Version 2.2.8</h2>
+            Published: 18.05.2020
+            <ul class=level2>
+                <li>New for Android version >=5.0 Lollipop: If a new version is available, the user is asked to install the new version.</li>
+                <li>New: Minor modifications of the user interface.</li>
+                <li>New: Adaption to Android 10.0</li>
+                <li>Bugfix Plus version: The view <i>Rise/Set</i> is not completely shown in landscape mode on some devices. It is now scrollable.</li>
+            </ul>
+
+            <h2>Version 2.1.4</h2>
+            Published: 21.01.2020
+            <ul class=level2>
+                <li>Bugfix: When the planets are running in continous mode and the screen is shut off and then shut on again, 
+                    then the planets are stopped and are not running continuously.
+                </li>
+            </ul>
+
+            <h2>Version 2.1.2</h2>
+            Published: 16.01.2020
+            <ul class=level2>
+                <li>Change: Start date with date and time.</li>
+                <li>Change: Modifications of planets settings are effective after closing the Settings view even if the Ready button was not clicked.</li>
+                <li>Change Plus version: when location is not enabled on the device, the location settings are opened.</li>
+                <li>Bugfix Plus version and Android 9.0 and above: when horizontal view or Rise&Set view is called for a location of an address, the time is not 
+                    given as local time of the address but as the default time of the device.</li>
+            </ul>
+
+            <h2>Version 2.0.2</h2>
+            Published; 26.08.2019
+            <ul class=level2>
+                <li>Bugfix: Forced stop on devices with Android 4.3, when planets are running continously and a <i>Start Date</i> was entered (possibly more times).</li>
+            </ul>
+
+            <h2>Version 2.0.1</h2>
+            Published; 08.11.2018
+            <ul class=level2>
+                <li>Free version BoPlanets 2.0.1:
+                    <ul class="level3">
+                        <li>Bugfix: Forced stop on devices with Android 4.3, when planets are running continously, the field <i>Start Date</i> was focused and the device was rotated several times.</li>
+                        <li>Bugfix: When BoPlanets was put to background by the Home key and re-activated, the start date was set to 1.1.1970.</li>
+                    </ul> 
+                </li>
+                <li>Version BoPlanets Plus 2.0.1: as version V2.0.0</li>
+            </ul>
+
+            <h2>Version 2.0.0</h2>
+            <ul class="level2">
+                <li>Adaption to Android V9.0.</li>
+                <li>New: Setting of observing planet and planets to show are now done in the drawer view <i>Settings</i>. This view
+                    becomes visible by swiping from the left side of the screen or by clicking the navigation button at the left side of the action bar
+                    at top of the screen. Swiping the view to the left side or clicking the navigation button shows the planets view.
+                </li>
+                <li>New: Input field <i>Start Date</i>; date, at which the planets are started.</li>
+                <li>New: The back button closes the open drawer <i>Settings</i>. If the drawer is not opened the back key finishes the app.</li>
+
+            </ul>
+            <h2>Version 1.0.2</h2>
+            <ul class="level2">
+                <li>
+                    For Android version < 3.0 menus are represented by icons in
+                    the action bar, as hitherto for versions >=3.0. Overflow items 
+                    become visible by clicking the menu button.
+                </li>
+                <li>Bug fix: If an invalid value was entered in an input field,
+                    the activity could only be closed after entering a valid value.
+                </li>
+                <li>Bug fix: Since Android version 4.3 a forced close happened
+                    some times, after the device was rotated.
+                </li>
+            </ul>
+            <h2>Version 1.0.1</h2>
+            (Plus version only)
+            <ul class="level2">
+                <li>Bug fix: when a dialog was opened (e.g. <i>Horizon at address</i>)
+                    and the home button was clicked, the error message <i>leaking window</i>
+                    was issued. Sometimes a forced close happened.
+                </li>
+                <li>When <i>Horizon at location</i> is selected and location
+                    access was not activated, settings of <i>Location access</i>
+                    is opened.
+                </li>
+                <li>When <i>Horizon at address</i> is selected and no network 
+                    connection was activated, settings of the device are opened.
+                </li>
+            </ul>
+
+
+            <h1><a name="contact">Contact</a></h1>
+            BoPlanets: Copyright (c) Bernd Ostermann 2013;
+            <p>
+                eMail: <a href="mailto:ostermann.bernd@googlemail.com">ostermann.bernd@googlemail.com</a><br/>
+            </p>
+        </div>
+    </body></html>

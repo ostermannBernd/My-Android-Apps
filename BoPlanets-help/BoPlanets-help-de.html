@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=yes"/>
+        <title>Hilfe zu BoPlanets</title>
+
+        <style>
+            body {
+                font-family: Arial,Helvetica,sans-serif;
+                background-color: black;
+                color:white;
+                font-size: 1.0em;
+                counter-reset: chapter;
+            }
+            A:link{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                color:#306EFF;
+            }
+            A:visited{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                color:#FF00A0;
+            }
+
+            A:hover{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                color:cyan;
+            }
+            A:active{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                color: red;
+            }
+
+            h1 {
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.2em;
+                font-weight: bold;
+            }
+            h2 {
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                font-weight: bold;
+                margin-left: 1.0em;
+            }
+            h3{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1em;
+                font-weight: bold;
+                margin-left: 1.5em;
+            }
+            p.head{
+                font-family: Arial,Helvetica,sans-serif;
+                font-size: 1.1em;
+                font-weight: bold;
+            }
+            p.subh{
+                font-weight: bold;
+                font-size: 0.9em;
+                margin-left: 1.5em;
+            }
+            .link_fontsize{
+                font-size: 1.1em;
+            }
+            DIV {
+                counter-reset: chapter;      /* Create a chapter counter scope */
+            }
+
+            H1:before {
+                content: counter(chapter) ". ";
+                counter-increment: chapter;  /* Add 1 to chapter */
+                counter-reset: section;      /* Set section to 0 */
+            }
+            H1 {
+                counter-reset: section;      /* Set section to 0 */
+            }
+            H2:before {
+                content: counter(chapter) "." counter(section) " ";
+                counter-increment: section;
+            }
+
+            DIV {
+                counter-reset: chapter;      /* Create a chapter counter scope */
+            }
+            ul.level1 {
+                margin-left: 1.5em;
+                padding-left: 0em;
+                list-style-type: square;
+            }
+            ul.level2 {
+                margin-left: 2.0em;
+                padding-left: 0em;
+                list-style-type: circle
+            }
+            ul.level3 {
+                margin-left: 2.5em;
+                padding-left: 0em;
+                list-style-type: disc
+            }
+            li{
+                margin-top: 0.5em
+            }
+            div.level2{
+                margin-left: 1.5em
+            }
+            div.level3{
+                margin-left: 2.0em
+            }
+        </style>
+
+    </head>
+    <body>
+        <p class="head"> Version</p>
+        <ul class="level1">
+            <li>Freie Version BoPlanets: V2.4.0</li>
+            <li>Bezahl-Version BoPlanets-Plus: V2.4.0</li>
+            <li>Erforderliche Android-Version: V4.3 oder höher</li>
+            <li>Entwickelt unter: Android V14.0</li>
+        </ul>
+        <p class="head">Aktualisieren von Google Play</p>
+        <div style="position: relative; float:left; margin-left: 1.0em; width: 5.3em; height: 5.3em;">
+            <img src="ic_launcher_playstore.png" alt="market icon"/>
+        </div>
+        <div class="link_fontsize" style="position: relative; float:left; width:auto; height: 5.3em;">
+            <a href="https://play.google.com/store/apps/details?id=electro.station.finder">
+                <b>BoPlanets Plus</b></a>
+            <p>
+                <a href="https://play.google.com/store/apps/details?id=electro.station.finder.plus">
+                    <b>BoPlanets</b></a>
+            </p>
+        </div>
+        <hr style="clear: both"/>
+        <div>
+            <p class="head">Inhalt</p>
+            <a href="#Overview_of_BoPlanets"><h1>Übersicht</h1></a>
+            <a href="#Starting_BoPlanets"><h1>Start BoPlanets</h1></a>
+            <a href="#View_Planets"><h1>Ansicht Planeten</h1></a>
+            <a href="#View_Settings"><h1>Ansicht Einstellungen</h1></a>
+            <a href="#Menu_Views"><h1>Menü Ansichten</h1></a>
+            <a href="#Menu_Movement"><h1>Menü Bewegung</h1></a>
+            <a href="#Menu_Rise_Transit_Set"><h1>Menü Aufgang, Kumulation, Untergang</h1></a>
+            <a href="#Draw_Panel"><h1>Planeten-Panel</h1></a>
+            <a href="#Orbital_Elements"><h1>Orbital-Elemente</h1></a>
+            <a href="#Glossary_of_Terms"><h1>Glossar</h1></a>
+            <a href="#changelog"><h1>Änderungen</h1></a>
+            <a href="#contact"><h1>Kontakt</h1></a>
+        </div>
+        <hr style="clear: both"/>
+        <div>
+            <h1><a name="Overview_of_BoPlanets">Übersicht</a></h1>
+            BoPlanets ist ein virtuelles Planetarium, das die Bahnen von Planeten 
+            relativ zu einem Beobachter-Planeten zeigt. Der Beobachter kann die Sonne oder 
+            jeder andere Planet sein.
+            <p>Die Planeten können in verschiedenen Koordinaten-Systemen gezeigt 
+                werden. Im Ekliptik-System werden die zum Beobachter relativen Planetenbahnen
+                in der Ebene der Ekliptik, im Äqutorial-System werden Rektazension und Deklination und im 
+                Horizontal-System werden Azimuth und Höhe über dem Horizont gezeigt.
+                Im Horizont-System wird die Position des Beobachters auf dem beobachtenden Planeten 
+                aus dem aktuellen Standort des Telefons ermittelt (so, als ob der Beobachter mit seinem 
+                Telefon auf dem Planeten sei), oder durch die Adresse eines Standorts (die real nur für die 
+                Erde existiert).
+            </p>
+            <p>
+                Es kann eine Liste mit den Zeiten von Aufgang, Kumulation und Untergang eines
+                Planeten von einem anderen Planeten gesehen erzeugt werden.
+            </p>
+            <p>Im Ekliptik-System werden die Epizyklen der Planeten gezeigt, beobachten 
+                von der Erde oder jedem anderen Planeten.
+            </p>
+            <P>Die Planeten können sich schrittweise oder kontinuierlih bewegen. 
+                Die Geschwindigkeit kann durch einen Regler verändert werden.
+            </P>
+            Es gibt die Bezahl-Version BoPlanets-Plus mit dem vollem und die freie 
+            Version BoPlanets mit eingeschränktem Funktionsumfang.
+            <br/>Die folgenden Funktionen gibt es nur in der Plus-Version:
+            <ul class="level1">
+                <li>
+                    Ansichten Horizont an Standort und an Adresse.
+                </li>
+                <li>
+                    Ermittlung von Zeiten für Planeten-Aufgang, Kumulation und Untergang.                    
+                </li>
+            </ul>
+
+            <h1><a name="Starting_BoPlanets">Start von BoPlanets</a></h1>
+            BoPlanets startet mit der Planeten-Ansicht und der Einschub-Ansicht 'Einstellungen'. Die Planeten-Ansicht enthält am oberen
+            Bildschirmrand die Aktions-Leiste mit dem Navigations-Button und den Menüs <i>Ansichten</i>, <i>Bewegung</i>, 
+            <i>Auf/Untergang</i> und <i>Hilfe</i>.
+            <p>
+                Mit dem Navigations-Button kann zwischen der Planeten-Ansicht und der Ansicht <i>Einstellungen</i> hin- und her geschaltet werden. 
+                Die Ansicht <i>Einstellungen</i> kann zudem durch Wischen vom linken Bildschirmrand sichtbar und durch Wischen nach links unsichtbar gemacht werden.
+            </p>
+
+            <h1><a name="View_Planets">Ansicht Planeten</a></h1>
+            Die Planeten-Ansicht enthält die folgenden Elemente:
+            <ul class="level1">
+                <li>Das Panel mit den Bewegungen der Planeten.</li>
+                <li>Ein Feld zur Eingabe der Schrittweite in Erdtagen.</li>
+                <li>Ein Regler, mit dem die Geschwindigkeit der Planeten geändert 
+                    werden kann.</li>
+                <li>Datum und Uhrzeit des Planetenstandes entsprechend der Zeitzone des Telefons.
+                </li>
+            </ul>
+            <h1><a name="View_Settings">Ansicht Einstellungen</a></h1>
+            Die Ansicht <i>Einstellungen</i> enthält die folgenden Felder:
+            <ul class='level1'>
+                <li>Start-Datum: Datum un Zeit, an dem die Planeten starten entsprechend der Zeitzone des Gerätes oder der Adresse eines Standorts.</li>
+                <li>Wähle Beobachter: zur Auswahl des beobachtenden Planeten.</li>
+                <li>Wähle Planeten: zur Auswahl der zu beobachtenden Planeten.</li>
+                <li>Button Fertig: Schließt die Ansicht und wendet die Einstellungen auf die Konfiguration der Planeten an.</li>
+            </ul>
+
+            <h1><a name="Menu_Views">Menü Ansichten</a></h1>
+            Diese Menü enthält die folgenden Einträge:
+            <UL class="level1">
+                <LI>Ekliptik:
+                    <br/>die Planeten werden in der Ebene der Ekliptik gezeigt.
+                </LI>
+                <LI>Log. Ecliptic:
+                    <br/>wie Ecliptik, aber mit logarithmisher Skalierung von Abständen.
+                <LI>Äquatorial:
+                    <br/>zeigt die Planeten relativ zur Äquatorial-Ebene
+                    des beobachtenden Planeten mit Rektazension und Deklination über der Äquatorebene.
+                </LI>
+
+                <LI>Horizont an Standort/Adresse (nur Plus-Version): 
+                    <br/>zeigt die Planeten relativ zur 
+                    Horizont-Ebene des beobachtenden Planeten. Dabei ist der Standort 
+                    des Beobachters auf dem Planeten gegeben durch die aktuelle 
+                    Position des Telefons auf dem Planeten (so als sei der Beobachter auf der gleichen
+                    Position wie auf der Erde) oder durch eine Adresse.
+                    <br/>Ist der Standort durch die aktuelle Position des Telefons gegeben,
+                    wird die Zeit gemäß der Zeitzone des Telefons angegeben, bei Wahl des Standortes durch eine 
+                    Adresse gemäß der Zeitzone der Adresse.
+                    <br/>Wenn ausgewählt,werden die Einstellungen <i>Standortzugriff</i> geöffnet, falls kein Standortzugriff aktiviert war.
+                </LI>
+            </UL>
+
+            <h1><a name="Menu_Movement">Menü Bewegung</a></h1>
+            Das Menü <i>Bewegung</i> enthält Einträge, die die Bewegung der
+            Planeten steuern.
+            <ul class="level1">
+                <li><i>Zeit vorwärts: </i>die Zeit läuft vorwärts.</li>
+                <li><i>Zeit rückwärts: </i> die Zeit läuft rückwärts.</li>
+                <li><i>Schrittweise: </i>Nach Berühren des Bildschirms bewegen sich die Planeten um
+                    einen Schritt.
+                <li><i>Kontinuierlich: </i>die Planeten bewegen sich kontinuierlich,
+                    bis die Option <i>Schrittweise</i> gewählt wird.
+                    <br/>(s. <a href="#Draw_Panel">Planeten-Ansicht</a>)
+                </li>
+            </ul>
+
+            <h1><a name="Menu_Rise_Transit_Set">Menü Aufgang/Untergang</a></h1>
+            (Nur Plus-Version)
+            <p>Auswahl des Menü-Punktes <i>Aufgang/Untergang</i> öffnet ein Fenster, 
+                mit dem die Parameter zur Ermittlungt der Zeiten von Aufgang, Kumulation 
+                und Untergang eines Planeten  aus Sicht eines Beobachter-Planeten 
+                eingegeben werden und die Berechnung gestartet wird.
+            </p>
+            <p>
+                Bedienelemente des Fensters:</p>
+            <ul class="level1">
+                <li><i>Beobachter: </i>Name des Beobachter-Planeten.</li>
+                <li><i>Standort: </i> Standort durch aktuelle Position des Telefons 
+                    auf Beobachter-Planeten.
+                    <br/>Bei der Auswahl <i>Standort</i> werden dei Einstellungen
+                    <i>Standortzugriff</i> geöffnet, wenn kein <i>Standortzugriff</i>
+                    aktiviert war.
+                </li>
+                <li><i>Adresse: </i>Standort ist durch eine Adresse gegeben.
+                </li>
+                <li><i>Breite/Länge: </i>Geographische Breite und Länge des Beobachters auf dem Planeten in Grad.</li>
+                <li><i>Wähle Planet: </i>wähle den Planeten, für den die Auf/Untergangs und 
+                    Kumulations-Zeiten ermittelt werden sollen.
+                </li>
+                <li><i>Wähle Auf/Untergangs-Höhe: </i>Wähle die Höhe relativ zum Horizont aus,
+                    die den Zeitpunkt von Auf- und Untergabg bestimmt.
+                    <ul class="level2">
+                        <li>
+                            Zentrum des Planeten ist bei 0 Grad.
+                        </li>
+                        <li>
+                            <i>-0.56° Atmosph. Lichtbrechung: </i>
+                            <br/>Zentrum des Planeten
+                            liegt 0,56 Grad unter Horizont. Wegen Lichtbrechung in der Atmosphäre
+                            des Beobachter-Planeten  wird der beobachtete Planet gerade sichtbar.
+                            (Sinnvoll nur für die Erde als Beobachter-Planet.)
+                        </li>
+                        <li><i>-0.83° Ob. Sonnenrand an Horizont: </i>
+                            <br/>Oberer Sonnenrand berührt 
+                            den Horizont, das Sonnenzentrum liegt bei 0,83 Grad unter Horizont.
+                            Wegen Lichtbrechung in der Atmosphäre und wegen des scheinbaren 
+                            Durchmessers wird die Sonne gerade sichtbar. 
+                            (Sinnvoll nur für die Erde als Beobachter-Planet.)
+                        </li>
+                        <li><i>-6° Ziviles Zwielicht:</i>
+                            <br/>Zentrum des Planeten liegt 6 Grad unter
+                            Horizont. Beginn des zivilen Zwielichtes.
+                        </li>
+                        <li><i>-12° Nautisches Zwielicht:</i>
+                            <br/>Zentrum des Planeten liegt 12 Grad unter
+                            Horizont. Beginn des nautischen Zwielichtes.
+                        </li>
+                        <li><i>-18° Astronomisches Zwielicht:</i>
+                            <br/>Zentrum des Planeten liegt 18 Grad unter
+                            Horizont. Beginn des atsronomischen Zwielichtes.
+                        </li>
+                    </ul>
+                </li>
+                <li><i>Startdatum: </i> Datum und Zeit, ab dem die erste Kumulation des 
+                    Planeten gesucht wird. Die Zeit entspricht der Zeitzone des Gerätes oder bei einem durch 
+                    eine Adresse gegebenen Standort der Zeitzone der Adresse. 
+                </li>
+                <li>Tage: Anzahl der zu berücksichtigenden aufeinander folgenden Kumulationen.
+                </li> 
+                <li>Schaltflächen:
+                    <ul class="level2">
+                        <li><i>Schließen: </i>Schließt das Fenster.</li>  
+                        <li><i>Ergebnisse: </i>Zeigt das Fenster mit den Ergbnissen.</li> 
+                        <li><i>Starten: </i>Startet die Berechnung der Auf/Untergangs- 
+                            und Kumulations-Zeiten. Die Ergebnisse werden in einem
+                            eigenen Fenster gezeigt.
+                        </li> 
+                        <li><i>Zeige gespeicherte Daten</i>: Öffnet einen Dialog zur Auswahl einer Datei mit gespeicherten Aufgang/Untergang-Daten 
+                            und zeigt die gewählte Datei an.</li>
+                    </ul>
+                </li>
+            </ul>
+            Auf- und Untergang treten ein, wenn das Zentrum des Planeten die 
+            definierte Auf/Untergangs-Höhe relativ zum Horizont des Beobachters erreicht.
+            <p>
+                Anwendung der von der atmosphärishen Lichtbrechung abhängigen
+                Auf/Untergangs-Höhen und die Zwielicht-Höhen ist nur sinnvoll für
+                die Erde als Beobachter-Planet.
+            </p>
+            <br/>
+            Die Ergebnisse werden in dem Ergebnis-Fenster angezeigt. Dieses hat
+            die folgenden Schaltflächen:
+
+            <ul class="level1">
+                <li><i>Anfang: </i>Springt zum Anfang der Ergebnisse.</li>
+                <li><i>Parameter: </i>Geht zum Fenster mit den Parametern zur 
+                    Ermittlung der Auf/Untergangs- und Kumulations-Zeiten.</li> 
+                <li><i>Speichern: </i>Speichert die Ergebnisse in einer Html-Datei auf dem externen Speicher.</li>
+            </ul>
+            Ist der Standort des Beobachters durch die aktuelle Position des
+            Telefons gegeben, werden Datum und Uhrzeit von Aufgang, Kumulation 
+            und Untergang entsprechend der Zeitzone des Telefons angegeben.
+            Ist der Standort durch eine Adresse gegeben, dann werden Datum und 
+            Uhrzeit gemäß der Zeitzone der Adresse angegeben.
+
+            <h1><a name="Draw_Panel">Planeten-Panel</a></h1>
+            Die Planeten-Ansicht zeigt die Planeten-Bahnen in verschiedenen 
+            Koordinaten-Systemen. Wenn der Modus <i>Schrittweise</i> ausgewählt ist,
+            bewegt ein Klick auf den Bildschirm die Planeten um einen Schritt weiter. 
+            Ein langer Klick löscht den Bildschirm. Im Modus <i>Kontinuierlich</i> bewegen 
+            sich die Planeten kontinuierlich.
+            <br/>Die Koordinaten-Achsen sind mit der Maßeinheit beschriftet:
+            <ul class="level1">
+                <li>Ekliptik und logarithmisch Ecliptik-System: 
+                    <br/>X- und Y-Achse mit AU: Astronomische Einheit= 149,598 Mio km
+                </li>
+                <li>Äquatorial-System:
+                    <br/>X-Achse: RA=Rectazension in Grad
+                    <br/>Y-Achse: DEC= Declination relativ zur festen Äquator-Ebene des 
+                    Beobachter-Planeten in Grad.
+                </li>
+                <li>Horizon system:
+                    <br/>X-Achse: AZI= Azimuth in Grad; Süden mit Azimuth 0 Grad.
+                    <br/>Y-Achse: ALT = Höhe relativ zum Horizont des Beobachters in Grad.
+                </li>
+            </ul>
+
+            <h1><a name="Orbital_Elements">Orbital-Elemente</a></h1>
+            Die Orbital-Eelemente (auch Kepler-Elemente) legen die Bahn der Planet bezogen auf
+            die Ekliptik fest.
+            <p>Diese Elemente sind (s. Bild unten):
+            <ul class="level1">
+                <li><B> Frühlings-Punkt der Erde (vernal eqinox):</B>
+                    <br/>Schnittlinie der Äquator-Ebene der Erde mit scheinbarer Bahnebene der Sonne 
+                    in aufsteigender Richtung. Die Linie Sonne zum Frühlingspunkt ist die
+                    X-Achse der Ekliptik.
+                </li>
+                <li><B>a: </B>Große Halbachse der Planeten-Ellipse</li>
+                <li><B>e: </B>Numerische Exzentrizität:
+                    <br/>Entfernung der Sonne vom Ellipsen-Zentrum = a*e
+                </li>
+                <li><B>Knotenlinie (line of nodes):</B>
+                    <br/>Schnittlinie der Planeten-Bahnebene mit Ekliptik. Der 
+                    aufsteigende Knoten (asending node) ist der Punkt, an dem der Planet die Ekliptik in
+                    aufsteigender Richtung schneidet.
+                </li>
+                <li><b>&#911;: </b>Länge des aufsteigenden Knotens: 
+                    <br/>Winkel zwischen Frühlingspunkt und aufsteigendem Knoten des Planeten 
+                    gemessen in der Ekliptik-Ebene.</li>
+                <li><b>&#969;:</b> Argument des Perihels: Winkel zwischen aufsteigendem Knoten
+                    und Perihel gemessen in der Bahnebene.</li>
+                <li><b>&#969;ve: </b> Frühlingspunkt des Planeten (Äquinoktien)
+                    <br/>Schnittlinie der Äquator-Ebene des Planeten mit seiner Bahnebene.
+                </li>
+                <li><b>&#957;: </b>&nbsp;Wahre Anomalie:
+                    <br/>Die wahre Anomalie ist der Winkel zwischen Perihel und Position des Planeten 
+                    auf seiner Ellipse.
+                </li>
+                <li><b>E:</b> Exzentrische Anomalie:
+                    <br/>Die exzentrische Anomalie eines Punktes P auf der Ellipse
+                    ist der Winkel am Ellipsen-Zentrum und einem Punkt Q, der 
+                    bestimmt ist durch eine vertikale Linie auf der Haupt-Achse 
+                    der Ellipse durch den Punkt P und dem Schnittpunkt Q mit 
+                    einem Hilfskreis mit Radius = halbe Hauptachse der Ellipse 
+                    um das Ellipsenzentrum. Der Radius-Vektor durch den Punkt Q 
+                    bildet den Winkel E mit der Hauptachse der Ellipse.
+                </li>
+            </ul>
+
+            <img src="orb_elem0.gif" alt="orbital elements" width="603" height="362">
+
+            <h1><a name="Glossary_of_Terms">Glossar</a></h1>
+            <UL class="level1">
+                <LI>Absteigender Knoten (descending node):
+                    <br/>Position, an der ein Planet die Ebene der Ekliptik 
+                    in absteigender Richtung (Süden) schneidet.
+                </LI>
+
+                <LI>Äquator-Ebene:
+                    <br/>Die Ebene parallel zum Äquator eines Planeten.
+                </LI>
+                <LI>Astronomische Einheit AU:
+                    <br/>mittlere Entfernung der Sonne von der Erde= 149,598 Mio km
+                </LI>
+
+                <LI>Aufsteigende Knoten (ascending node):
+                    <br/>die Position, an der der Planet die Ebene der Ekliptik in 
+                    aufszeigender Richtung (Nord) schneidet.
+                </LI>
+                <LI>Aufgang eines Planeten:
+                    <br/>Von unterhalb des Horizonts kommend erreicht das Zentrum des
+                    Planeten die Auf/Untergang definierende Höhe relativ zum Horizont
+                    eines Beobachters auf dem Beobachter-Planeten.
+                </LI>
+
+                <LI>Auf/Untergang definierende Höhe:
+                    <br/>(s. <a href="#Menu_Rise_Transit_Set">Menü Aufgang, Kumulation, Untergang</a>)
+                </LI>
+                <LI>Azimuth:
+                    <br/>
+                    der Winkel der Projektion des Radius-Vektors eines Planeten 
+                    auf die Horizont-Ebene und der Süd-Linie.
+                    (Osten: negativ, Westen: positiv; Süden: 0 Grad).
+                </LI>
+                <LI>Datum&amp;Zeit:
+                    <br/>Datum und Zeit der auf dem Telefon eingestellten Zeitzone.
+                </LI>
+                <LI>Deklination:
+                    <br/>der Winkel eines Planeten relativ zur Äquator-Ebene
+                    des Beobachter-Planeten.
+                </LI>
+
+                <LI>Ekliptik:
+                    <br/>Die Referenz-Ebene des Solar-Systemes. Die X-Achse ist
+                    durch die Linie Sonne - Frühlingspunkt (vernal eqinox)
+                    der Erde gegeben.
+                </LI>
+
+                <LI>Greenwich-Meridian:
+                    <br/>der Meridian mit geographischer Länge 0 Grad.
+                    <br/>Der Greenwich Meridian für andere Planeten als die Erde ist 
+                    definiert als der, an dem die Sonne am 01.01.2000, 0:0hr ihren 
+                    tiefsten Stand erreicht hat.
+                    <br/>Für die Sonne als Beobachter-Planet ist der Greenwich-Meridian der,
+                    der am 01.01.2000 0:0 hr parallel zur Linie zum Frühlingspunkt lag.
+                </LI>
+                <LI>Greenwich mittlere siderishe Zeit (Greenwich Mean Sidereal Time GMST):
+                    <br/>der Winkel des Greenwich-Meridians gegen die Linie Sonne-
+                    Frühlingspunkt des Planeten in Grad.
+                </LI>
+                <LI>Höhenwinkel:
+                    <br/>
+                    der Winkel eines Planeten relativ zur Horizontal-Ebene eines Beobachters.
+                </li>
+                <LI>Horizont-Ebene:
+                    <br/>Tangential-Ebene an einem Beobachtungs-Punkt auf einem Planeten.
+                </LI>
+
+                <LI>Geographische Breite:
+                    <br/>Der Winkel eines Standortes auf einem Planeten gemessen gegen seinen 
+                    Äquator (Norden: positiv, Süden: negativ).
+                </LI>
+                <LI>Geographische Länge:
+                    <br/>Winkel, den der lokale Meridian mit dem Meridian von Greenwich
+                    bildet (Osten: positiv, Westen: negativ)
+                </LI>
+
+                <LI>Lokale mittlere siderische Zeit (Mean Sidereal Time LMST):
+                    <br/>der Winkel, den der lokale Meridian mit dem Frühlingspunkt
+                    des Planeten bildet.
+                    <br/>LMST=GMST + geographische Länge des Meridians.
+                </LI>
+
+                <LI>Neigung der Rotationsachse (obliquity):
+                    <br/>Neigung der Rotations-Ahse gegen die Bahnebene des Planeten.
+                </LI>
+
+                <LI>Orbit:
+                    <br/>Bewegung des Planeten in der Bahnebene.</LI>
+
+                <LI>Orbital/Kepler Elemente eines Planeten:
+                    <br/>(s. <a href="#Orbital_Elements">Orbital-Elemente</a>)
+                </LI>
+
+                <LI>Perihel (perihelion):
+                    <br/>Position des Planeten auf seiner Bahn mit der minimalen 
+                    Entfernung zur Sonne.
+                </LI>
+
+                <LI>Rectazension (right ascension):
+                    <br/>Winkel der Position eines Planeten in der Äquator-Ebene des
+                    Beobachter-Planeten gegen seinen  Frühlingspunkt (vernal equinox).
+                </LI>
+
+                <LI>Siderischer Tag:
+                    <br/>Zeit, um 360 Grad um die Rotations-Achse des Planeten zu drehen.
+                    (Erde: 0.9972 *24 h)</LI>
+                <LI>Standort auf dem Beobachter-Planeten:
+                    <br/>Standort auf dem Beobachter-Planeten, der durch die geographishe 
+                    Länge und Breite des Telefons auf der Erde oder einer Adresse auf der Erde
+                    bestimmt ist.
+                </li>
+                <LI>Sonnen-Tag:
+                    <br/>Zeit für eine Umdrehung des Planeten um seine Rotations-Achse, bis 
+                    der gleiche Stand der Sonne erreicht wird (Erde: 24 h).</LI>
+
+                <LI>Umlauf-Periode (orbital period):
+                    <br/>Zeit für einen Umlauf um die Sonne.
+                </LI>
+                <LI>Untergang eines Planeten:
+                    <br/>Von oberhalb des Horizonts kommend erreicht der Planet die
+                    Auf/Untergang definierende Höhe relativ zum Horizont eines
+                    Beobachters auf dem Beobachter-Planeten.
+                </LI>
+            </UL>
+
+            <h1><a name="changelog">Änderungen</a></h1>
+            <h2>Version 2.4.0</h2>
+            Veröffentlicht: xx.xx.2024
+            <ul class=level2>
+                <li>Neu: Anpassung an geforderte Google Richtlinien.</li>
+            </ul>
+            <h2>Version 2.3.5</h2>
+            Veröffentlicht: 24.08.2023
+            <ul class=level2>
+                <li>Neu: Anpassungen an Android 14.</li>
+                <li>Fehlerbehebung: Korrektur von Google Richtlinien-Verstößen.</li>
+            </ul>
+            <h2>Version 2.3.4</h2>
+            Veröffentlicht: 27.12.2021
+            <ul class=level2>
+                <li>Neu: Anpassungen an Android V12.0</li>
+                <li>Neu Plus-Version: Die Ergebnisse von Auf/Untergang werden im gemeinsamen Speicher abgelegt, anstelle im app-spezifischen Speicher.
+                    Andere Apps wie Datei-Manager oder Browser können darauf zugreifen.</li>
+                <li>Kleinere Korrekturen bei der Planeten-Darstellung.</li>
+            </ul>
+
+            <h2>Plus-Version 2.3.1, Freie Version 2.3.2</h2>
+            Veröffentlicht: 10.01.2021
+
+            <ul class=level2>
+                <li>Neu: Anpassungen an Android V11.0</li>
+                <li>Neu: Das Start-Datum kann mit und ohne Zeit eingegeben werden.</li>
+                <li>Neu Plus-Version: Anzeige von bereits in einer Datei gespeicherten Aufgang/Untergang-Daten.
+                    <br/>Weil in Android 11.0 Datei-Manager nicht mehr auf app-spezifische Daten zugreifen können, 
+                    ist das die einzige Möglichkeit, gespeicherte Daten anzuzeigen.
+                </li>
+                <li>Fehlerbehebung: die Eingabe von Start-Datum und Zeit war nicht möglich.</li>
+                <li>Fehlerbehebung Plus-Version: die Auswahl einer Standort-Adresse ergab immer einen Fehler.</li>
+            </ul>
+
+            <h2>Plus Version 2.2.6, Free Version 2.2.8</h2>
+            Veröffentlicht: 18.05.2020
+            <ul class=level2>
+                <li>Neu für Android Version >=5.0 Lollipop: Wenn eine aktualisierte Version vorhanden ist, wird der Benutzer aufgefordert, diese zu installieren.</li>
+                <li>Neu: Kleinere Änderungen der Benutzeroberfläche..</li>
+                <li>Neu: Anpassungen an Android 10.0</li>
+                <li>Fehlerbehebung Plus-Version: Auf einigen Geräten wird die Ansicht <i>Auf/Untergang</i> im Querformat nicht vollständig angezeigt.</li>
+            </ul>
+
+            <h2>Version 2.1.4</h2>
+            Veröffentlicht: 21.01.2020
+            <ul class=level2>
+                <li>Fehlerbehebung: Wenn die Planeten sich kontinuierlich bewegen und der Bildschirm ausgeschaltet 
+                    und dann wieder eingeschaltet wird, wird die Bewegung der Planeten nicht fortgesetzt.</li>
+            </ul>
+
+            <h2>Version 2.1.2</h2>
+            Veröffentlicht: 16.01.2020
+            <ul class=level2>
+                <li>Änderung: Start-Datum mit Datum und Zeit.</li>
+                <li>Änderung:  Modifikationen der Planeten-Einstellungen werden wirksam nach Schließen der Einstellungen, 
+                    auch wenn der Fertig-Button nicht gedrückt wurde.
+                </li>
+                <li>Änderung: Plus-Version: wenn der Standort-Dienst des Gerätes nicht aktiviert ist, werden die Einstellungen des Dienstes geöffnet.
+                </li>
+                <li>Fehlerbehebung Plus-Version und Android >=9.0: Wenn die Horizontal-Ansicht oder Auf/Untergang für den Standort einer Adresse aufgerufen wurde,
+                    wird die Zeit nicht als lokale Zeit der Adresse angegeben, sondern als auf dem Gerät eingestellte Zeit.
+                </li>
+            </ul>
+
+            <h2>Version 2.0.2</h2>
+            Veröffentlicht: 26.08.2019
+            <ul class=level2>
+                <li>Fehlerbehebung (Freie Version): Erzwungener Abbruch bei Geräten mit Android 4.3, wenn sich die Planeten kontinuierlich bewegen und ein <i>Start-Datum</i> eigegeben wurde (ev. mehrfach).</li>
+            </ul>
+
+            <h2>Version 2.0.1</h2>
+            Veröffentlicht: 08.11.2018
+            <ul class=level2>
+                <li>Freie Version BoPlanets 2.0.1:
+                    <ul class="level3">
+                        <li>Fehlerbehebung: Erzwungener Abbruch bei Geräten mit Android 4.3, wenn sich die Planeten kontinuierlich bewegen, das Feld <i>Start-Datum fokussiert ist und das Gerät mehrfach gedreht wurde.</i>
+                        <li>Fehlerbehebung: Wenn BoPlanets durch die Home-Taste in den Hintergrund verschoben und dann wieder aktiviert wurde, erscheint als Start-Datum 1.1.1970.</li>
+                    </ul>
+                </li>
+                <li>Version BoPlanets Plus 2.0.1: s. Version V2.0.0</li>
+            </ul>
+
+            <h2>Version 2.0.0</h2>
+            <ul class="level2">
+                <li>Anpassungen an Android V9.0.</li>
+                <li>Neu: Die Einstellungen zu Beobachter-Planet und anzuzeigende Planeten wurde in eine Einschub-Ansicht <i>Einstellungen</i> verlagert.
+                    Diese kann durch Wischen vom linken Bildschirmrand oder durch Klick auf den Navigations-Button links in der Aktionsleiste am oberen Bildschirmrang sichtbar gemacht werden.
+                    Wischen nach links oder Klick auf den Navigations-Button zeigt wieder die Planeten-Ansicht.
+                </li>
+                <li>Neu: Feld <i>Startdatum </i>; Datum, an dem die Planeten starten,</li>
+                <li>Neu: Der Zurück-Button schließt die geöffneten <i>Einstellungen</i>. Wenn diese nicht geöffnet waren, wird die App beendet.</li>
+            </ul>
+
+            <h2>Version 1.0.2</h2>
+            <ul class="level2">
+                <li>
+                    Menüs werden für Android-Version < 3.0 durch Icons in der 
+                    Aktions-Leiste angesprochen, wie bisher für Version >= 3.0. Einträge,
+                    die nicht in die Aktions-Leiste passen, werden durch Klicken 
+                    des Menü-Knopfes sichtbar.
+                </li>
+                <li>Fehlerbehebung: Wurde in einem Eingabefeld ein unzulässiger Wert
+                    eingegeben, dann konnte die Aktivität erst nach Eingabe eines 
+                    korrekten Wertes geschlossen werden.
+                </li>
+                <li>Fehlerbehebung: Ab Androd Version 4.3  trat häufig ein erzwungener Abbruch auf, 
+                    nachdem das Telefon gedreht wurde. 
+                </li>
+            </ul>
+            <h2>Version 1.0.1</h2>
+            (Nur Plus-Version)
+            <ul class="level2">
+                <li>Fehlerbehebung: wenn ein Dialog geöffnet war (z.B.<i> Horizont 
+                        an Adresse</i>) und der Home Button gedrückt wurde, erschien häufig die 
+                    Meldung <i>leaking window</i>, was manchmal zu einem erzwungenen 
+                    Abbruch führte.
+                </li>
+                <li>Wenn <i>Horizont an Standort</i> gewählt wird und kein 
+                    <i>Standortzugriff</i> aktiviert war, werden die Einstellungen
+                    <i>Standortzugriff</i> geöffnet.
+                </li>
+                <li>Wenn <i>Horizont an Adresse</i> gewählt wird und keine 
+                    Netzwerk-Verbindung aktiviert war, dann werden die Einstellungen 
+                    des Telefons geöffnet.
+                </li>
+            </ul>
+
+            <h1><a name="contact">Kontakt</a></h1>
+            BoPlanets: Copyright (c) Bernd Ostermann 2013;
+            <p>
+                eMail: <a href="mailto:ostermann.bernd@googlemail.com">ostermann.bernd@googlemail.com</a><br/>
+            </p>
+        </div>
+    </body></html>
